@@ -1,0 +1,22 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="hazeA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(250 180) rotate(25) scale(720 460)">
+      <stop stop-color="#DCE8F0" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#DCE8F0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hazeB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1320 760) rotate(-22) scale(700 430)">
+      <stop stop-color="#D5C6E8" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#D5C6E8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hazeC" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(930 380) rotate(90) scale(430 720)">
+      <stop stop-color="#F2D6B0" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#F2D6B0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#hazeA)"/>
+  <rect width="1600" height="1000" fill="url(#hazeB)"/>
+  <rect width="1600" height="1000" fill="url(#hazeC)"/>
+  <path d="M-80 760C220 560 420 920 720 690C990 482 1110 650 1680 330" stroke="#E4EEF4" stroke-opacity=".18" stroke-width="3"/>
+  <path d="M-100 850C230 650 420 990 760 760C1050 562 1180 710 1710 430" stroke="#D6C8E9" stroke-opacity=".14" stroke-width="2"/>
+  <path d="M180 120C470 260 620 20 890 160C1130 286 1270 170 1510 250" stroke="#F3D9B7" stroke-opacity=".1" stroke-width="2"/>
+</svg>

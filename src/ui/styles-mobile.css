@@ -1,0 +1,718 @@
+/*
+ * N//XT mobile experience
+ *
+ * This is intentionally separate from the desktop workspace system. Mobile is
+ * a first-class working surface: fewer competing layers, a persistent tab bar,
+ * one-handed logging, and compact signal groups instead of a shrunken desktop.
+ */
+
+.mobile-capture-button {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --mobile-gutter: 16px;
+    --mobile-nav-space: 112px;
+  }
+
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  body {
+    font-size: 16px;
+    background: var(--workspace-bg);
+  }
+
+  #root {
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  .app-shell {
+    display: block;
+    min-height: 100dvh;
+    background: var(--workspace-bg);
+  }
+
+  .main-content {
+    min-height: 100dvh;
+    padding-bottom: calc(var(--mobile-nav-space) + env(safe-area-inset-bottom));
+    background: var(--workspace-bg);
+  }
+
+  .main-content::before,
+  .main-content::after {
+    display: none;
+  }
+
+  .topbar {
+    width: 100%;
+    min-height: 68px;
+    margin: 0;
+    padding: 10px var(--mobile-gutter) 9px;
+    background: color-mix(in srgb, var(--workspace-bg) 94%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--workspace-line) 76%, transparent);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+  }
+
+  .topbar h1 {
+    max-width: 24ch;
+    margin: 0;
+    font-size: clamp(1.08rem, 4.6vw, 1.34rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
+
+  .topbar .eyebrow {
+    min-height: 20px;
+    padding: 2px 0;
+    margin: 0 0 3px;
+    color: var(--workspace-muted);
+    background: transparent;
+    border: 0;
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* The global log action becomes a reachable thumb-zone action on mobile. */
+  .topbar-log-button {
+    display: none;
+  }
+
+  .mobile-capture-button {
+    position: fixed;
+    right: 16px;
+    bottom: calc(92px + env(safe-area-inset-bottom));
+    z-index: 49;
+    display: grid;
+    width: 56px;
+    min-width: 56px;
+    height: 56px;
+    min-height: 56px;
+    padding: 0;
+    place-items: center;
+    color: var(--accent-ink);
+    background: var(--accent);
+    border: 1px solid var(--accent-strong);
+    border-radius: 50%;
+    box-shadow: 0 10px 26px color-mix(in srgb, var(--workspace-shadow) 88%, transparent);
+  }
+
+  .mobile-capture-button svg {
+    width: 23px;
+    height: 23px;
+    margin: 0;
+  }
+
+  .mobile-capture-button span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .page {
+    width: 100%;
+    gap: 14px;
+    padding: 16px var(--mobile-gutter) 26px;
+  }
+
+  .page-title-row,
+  .welcome-row {
+    gap: 12px;
+  }
+
+  .page-title-row h2,
+  .welcome-row h2 {
+    max-width: 22ch;
+    font-size: clamp(1.55rem, 7.6vw, 2rem);
+    line-height: 1.1;
+  }
+
+  .page-title-row > .button-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .page-title-row > .button-row > .primary-button {
+    grid-column: 1 / -1;
+  }
+
+  .page-title-row > .button-row > * {
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+  }
+
+  .onboarding-shell {
+    min-height: 100svh;
+    padding: 16px var(--mobile-gutter) calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .onboarding-card,
+  .onboarding-card-redesign {
+    width: 100%;
+    padding: 17px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--workspace-shadow) 34%, transparent);
+  }
+
+  .onboarding-brand {
+    margin-bottom: 24px;
+  }
+
+  .onboarding-welcome-grid,
+  .onboarding-review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .onboarding-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .onboarding-actions > * {
+    width: 100%;
+  }
+
+  .button-row > button,
+  .button-row > a,
+  .button-row > label {
+    min-height: 46px;
+  }
+
+  .panel,
+  .metric-card,
+  .setting-card,
+  .profile-hero,
+  .profile-snapshot-strip,
+  .summary-strip,
+  .pattern-summary-card,
+  .activity-week-chart,
+  .training-prompt,
+  .practice-selection-summary,
+  .toolkit-library,
+  .journal-writing-prompt,
+  .markdown-editor,
+  .gif-search-panel,
+  .record-view-tabs,
+  .profile-fact-list,
+  .profile-goal-list,
+  .profile-focus-card {
+    border-radius: 16px;
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--workspace-shadow) 34%, transparent);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .panel::after,
+  .metric-card::after,
+  .setting-card::after,
+  .profile-hero::after,
+  .profile-snapshot-strip::after,
+  .summary-strip::after,
+  .pattern-summary-card::after,
+  .activity-week-chart::after,
+  .training-prompt::after,
+  .practice-selection-summary::after,
+  .toolkit-library::after,
+  .journal-writing-prompt::after,
+  .markdown-editor::after,
+  .gif-search-panel::after,
+  .record-view-tabs::after,
+  .profile-fact-list::after,
+  .profile-goal-list::after,
+  .profile-focus-card::after {
+    display: none;
+  }
+
+  .panel,
+  .metric-card,
+  .setting-card,
+  .profile-hero {
+    padding: 17px;
+  }
+
+  .panel-heading {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .panel-heading h3 {
+    font-size: 1.06rem;
+  }
+
+  .panel-heading-actions,
+  .customizer-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .metric-card {
+    gap: 6px;
+    min-height: 128px;
+    padding: 14px;
+  }
+
+  .metric-card strong {
+    white-space: normal;
+    font-size: clamp(1.08rem, 5.4vw, 1.34rem);
+  }
+
+  .metric-card > span,
+  .metric-card > small {
+    font-size: 0.78rem;
+  }
+
+  .metric-icon,
+  .setting-icon,
+  .checkin-launch-icon,
+  .writing-prompt-mark {
+    width: 30px;
+    height: 30px;
+  }
+
+  .today-page .welcome-row {
+    padding-top: 2px;
+  }
+
+  .today-greeting {
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+  }
+
+  .daily-affirmation-text {
+    max-width: 21ch;
+    margin-bottom: 6px;
+    font-size: clamp(1.42rem, 7.8vw, 1.92rem);
+    line-height: 1.1;
+  }
+
+  .daily-affirmation small {
+    font-size: 0.68rem;
+  }
+
+  .today-focus-context {
+    margin-top: 12px;
+    padding-top: 10px;
+    font-size: 0.78rem;
+  }
+
+  .today-focus-chip,
+  .today-intention-chip {
+    min-height: 34px;
+    padding: 6px 10px;
+  }
+
+  .notice > div {
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  .today-dashboard-stack {
+    gap: 12px;
+  }
+
+  .today-detail-grid,
+  .today-context-grid,
+  .body-overview-grid,
+  .profile-page-grid,
+  .profile-lower-grid,
+  .nutrition-layout,
+  .mind-grid,
+  .toolkit-layout,
+  .activity-insight-grid,
+  .activity-details-grid,
+  .activity-dashboard,
+  .mind-record-grid,
+  .pattern-overview,
+  .settings-grid,
+  .medication-overview-grid,
+  .quick-actions,
+  .goal-grid,
+  .integration-card-grid,
+  .profile-focus-cards,
+  .social-channel-grid,
+  .intention-grid,
+  .food-results,
+  .catalog-result,
+  .gif-result-grid,
+  .photo-compare-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .summary-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .summary-strip > div {
+    padding: 13px;
+    border-right: 1px solid var(--workspace-line);
+    border-bottom: 1px solid var(--workspace-line);
+  }
+
+  .summary-strip > div:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .summary-strip > div:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .summary-strip span {
+    font-size: 0.68rem;
+  }
+
+  .summary-strip strong {
+    font-size: 1rem;
+  }
+
+  .today-ring-row,
+  .sleep-snapshot-grid,
+  .activity-signal-grid,
+  .macro-summary,
+  .energy-stats,
+  .profile-snapshot-strip,
+  .medication-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .today-ring-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .today-ring-row > div,
+  .sleep-snapshot-grid > div,
+  .activity-signal-card,
+  .macro-summary > div,
+  .energy-stats > div,
+  .profile-snapshot-strip > div,
+  .medication-summary-item {
+    min-width: 0;
+    padding: 12px;
+  }
+
+  .today-ring-row strong,
+  .sleep-snapshot-grid strong {
+    font-size: 1.05rem;
+  }
+
+  .section-jump-nav {
+    position: sticky;
+    top: 68px;
+    z-index: 24;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 3px;
+    margin: 0 calc(var(--mobile-gutter) * -1) 4px;
+    padding: 5px var(--mobile-gutter);
+    background: color-mix(in srgb, var(--workspace-bg) 95%, transparent);
+    border-top: 1px solid color-mix(in srgb, var(--workspace-line) 72%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--workspace-line) 72%, transparent);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
+  .section-jump-nav > span {
+    padding-right: 6px;
+    font-size: 0.63rem;
+  }
+
+  .section-jump-links {
+    gap: 3px;
+  }
+
+  .section-jump-nav a {
+    min-height: 44px;
+    padding: 8px 10px;
+    font-size: 0.72rem;
+  }
+
+  .section-jump-customizer {
+    min-width: max-content;
+    margin-left: 3px;
+    padding-left: 5px;
+  }
+
+  .section-jump-customizer .customizer-toggle {
+    min-height: 44px;
+    padding: 7px 9px;
+    font-size: 0.72rem;
+  }
+
+  .pattern-controls,
+  .date-controls,
+  .activity-target-controls,
+  .mind-record-controls {
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .pattern-controls > *,
+  .date-controls > *,
+  .activity-target-controls > *,
+  .mind-record-controls > * {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .segmented-control {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .segmented-control button {
+    min-width: 0;
+    min-height: 44px;
+    padding: 8px 4px;
+    font-size: 0.73rem;
+  }
+
+  .date-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .date-controls input {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .date-controls button {
+    width: 100%;
+  }
+
+  .food-search-row,
+  .food-secondary-tools,
+  .food-utility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-search-submit {
+    width: 100%;
+  }
+
+  .activity-entry-layout,
+  .journal-meta-row {
+    grid-template-columns: 1fr;
+  }
+
+  .sleep-entry-prompt {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .sleep-entry-prompt .secondary-button {
+    width: 100%;
+  }
+
+  .activity-form-footer {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .activity-form-footer .primary-button {
+    width: 100%;
+  }
+
+  .entry-row,
+  .medication-dose-row,
+  .single-signal-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+    padding: 13px 0;
+  }
+
+  .entry-actions,
+  .medication-dose-actions {
+    justify-content: flex-end;
+  }
+
+  .entry-actions button,
+  .medication-dose-actions button {
+    min-width: 42px;
+    min-height: 42px;
+  }
+
+  .record-view-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .record-view-tabs button {
+    min-height: 44px;
+  }
+
+  .skill-list {
+    max-height: min(48svh, 380px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-right: 2px;
+  }
+
+  input,
+  select,
+  textarea {
+    min-height: 48px;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  .sheet-backdrop {
+    align-items: end;
+    padding: 0;
+  }
+
+  .capture-sheet,
+  .practice-chooser-dialog,
+  .checkin-dialog {
+    width: 100%;
+    max-height: 92dvh;
+    padding: 18px var(--mobile-gutter) calc(24px + env(safe-area-inset-bottom));
+    border-radius: 22px 22px 0 0;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    right: 10px;
+    bottom: max(8px, env(safe-area-inset-bottom));
+    left: 10px;
+    z-index: 50;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 3px;
+    padding: 6px;
+    background: color-mix(in srgb, var(--workspace-surface) 96%, transparent);
+    border: 1px solid color-mix(in srgb, var(--workspace-line) 88%, transparent);
+    border-radius: 20px;
+    box-shadow: 0 12px 34px color-mix(in srgb, var(--workspace-shadow) 92%, transparent);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+  }
+
+  .mobile-nav button {
+    display: grid;
+    min-width: 0;
+    min-height: 54px;
+    place-items: center;
+    gap: 3px;
+    padding: 6px 2px;
+    color: var(--workspace-muted);
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    font-size: 0.64rem;
+    font-weight: 800;
+  }
+
+  .mobile-nav button.active,
+  .mobile-nav button.has-current {
+    color: var(--workspace-ink);
+    background: var(--accent-soft);
+    border-color: color-mix(in srgb, var(--accent) 72%, var(--workspace-line));
+    box-shadow: inset 0 2px 0 var(--accent);
+  }
+
+  .mobile-more-menu {
+    right: 0;
+    bottom: 68px;
+    min-width: 188px;
+    padding: 8px;
+    border-radius: 16px;
+    box-shadow: 0 12px 34px color-mix(in srgb, var(--workspace-shadow) 92%, transparent);
+  }
+
+  .mobile-more-menu button {
+    display: flex;
+    justify-content: flex-start;
+    min-height: 46px;
+    padding: 8px 11px;
+    border-radius: 10px;
+  }
+
+  .to-top-button {
+    right: 16px;
+    bottom: calc(164px + env(safe-area-inset-bottom));
+    z-index: 51;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --mobile-gutter: 13px;
+  }
+
+  .page {
+    padding-top: 13px;
+  }
+
+  .panel,
+  .metric-card,
+  .setting-card,
+  .profile-hero {
+    padding: 15px;
+  }
+
+  .metric-card {
+    min-height: 118px;
+    padding: 13px;
+  }
+
+  .today-ring-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .today-ring-row > div {
+    padding: 9px 7px;
+  }
+
+  .today-ring-row strong {
+    font-size: 0.98rem;
+  }
+
+  .mobile-capture-button {
+    right: 13px;
+  }
+
+  .mobile-nav {
+    right: 7px;
+    left: 7px;
+  }
+
+  .mobile-nav button {
+    font-size: 0.59rem;
+  }
+
+  .mobile-nav button svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media (min-width: 721px) {
+  .mobile-nav {
+    display: none;
+  }
+}
