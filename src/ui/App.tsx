@@ -6305,7 +6305,20 @@ function MindPreview({
                     aria-pressed={selectedCheckInFields.includes(signal.key)}
                     onClick={() => toggleCheckInField(signal.key)}
                   >
-                    {signal.label}
+                    <span className="checkin-choice-icon" aria-hidden="true">
+                      {signal.icon}
+                    </span>
+                    <span className="checkin-choice-copy">
+                      <strong>{signal.label}</strong>
+                      <small>
+                        {selectedCheckInFields.includes(signal.key)
+                          ? 'Included in this entry'
+                          : `${signal.low} to ${signal.high}`}
+                      </small>
+                    </span>
+                    <span className="checkin-choice-mark" aria-hidden="true">
+                      {selectedCheckInFields.includes(signal.key) ? '✓' : '+'}
+                    </span>
                   </button>
                 ))}
               </div>
