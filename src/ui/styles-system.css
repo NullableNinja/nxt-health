@@ -8210,20 +8210,9 @@
   }
 }
 
-/* Medication tracker v2: one quiet surface, one clear action, and no nested
-   stack of competing cards. */
+/* Medication tracker v2: keep the tracker aligned with the shared panel
+   treatment while giving its schedule controls a clear hierarchy. */
 @layer components {
-  .medication-tracker {
-    padding: 0 !important;
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-  }
-
-  .medication-tracker::after {
-    display: none;
-  }
-
   .medication-tracker > .panel-heading {
     padding-bottom: 2px;
   }
