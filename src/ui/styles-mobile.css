@@ -716,3 +716,142 @@
     display: none;
   }
 }
+
+@media (max-width: 720px) {
+  .daily-affirmation-text {
+    max-width: 26ch;
+    font-size: clamp(1.2rem, 6.2vw, 1.55rem);
+    line-height: 1.16;
+  }
+
+  .fasting-settings-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fasting-toggle {
+    grid-column: 1 / -1;
+  }
+
+  .fasting-actions {
+    align-items: stretch;
+  }
+
+  .fasting-actions > button {
+    flex: 1 1 180px;
+  }
+
+  .fasting-reminder-toggle {
+    width: 100%;
+  }
+
+  .checkin-launch {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .checkin-launch > .primary-button {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .journal-checkin-builder {
+    padding: 12px;
+  }
+
+  .checkin-signal-choices {
+    grid-template-columns: 1fr;
+  }
+
+  .checkin-signal-choices button {
+    min-height: 60px;
+  }
+
+  .activity-entry-layout {
+    gap: 14px;
+  }
+
+  .activity-details-grid {
+    padding: 0;
+    border-left: 0;
+  }
+
+  .nutrition-date-panel .date-controls {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .nutrition-date-panel .date-controls > * {
+    width: auto;
+    min-width: max-content;
+    flex: 0 0 auto;
+  }
+
+  .nutrition-date-panel .date-controls input {
+    width: 145px;
+    min-width: 145px;
+    flex: 1 1 145px;
+  }
+
+  .nutrition-date-panel .date-controls button {
+    min-height: 42px;
+    padding: 8px 10px;
+    font-size: 0.74rem;
+  }
+
+  .medication-card {
+    gap: 8px;
+    padding-top: 14px;
+  }
+
+  .medication-card-details {
+    padding-left: 48px;
+  }
+
+  .medication-card-details strong {
+    font-size: 0.86rem;
+  }
+
+  .medication-dose-row {
+    min-height: 34px;
+  }
+
+  .photo-input-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photo-input-actions > * {
+    width: 100%;
+  }
+
+  .activity-no-results {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .activity-no-results .secondary-button {
+    width: 100%;
+  }
+
+  .personal-workout-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .personal-workout-list button {
+    width: 100%;
+  }
+
+  .custom-workout-dialog {
+    max-height: 92dvh;
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .custom-workout-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

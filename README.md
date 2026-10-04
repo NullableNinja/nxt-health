@@ -20,6 +20,7 @@ The Phase 1 foundation currently includes:
 - foundational local contracts for wellbeing observations, life events, and granular consent;
 - installable PWA configuration and offline-capable app shell;
 - responsive dashboard layouts for desktop and phone widths;
+- Capacitor Android host under `apps/android`, sharing the web build and ready for native capability bridges;
 - unit tests for conversions, metabolic equations, and trend calculations.
 
 ## Run locally
@@ -38,7 +39,18 @@ npm run test
 npm run build
 ```
 
-Optional provider configuration belongs in `.env` and must never be committed. USDA lookups require a FoodData Central API key; the app remains useful without one through cached/custom foods. Journal GIF search uses an optional `VITE_GIPHY_API_KEY`; local image uploads and direct GIF URLs do not require a key.
+Android host workflow:
+
+```powershell
+npm run android:sync
+npm run android:open
+```
+
+The Android project is a Capacitor shell around the shared web app. Android Studio
+and the Android SDK are required to open, run, and package it. The application ID in
+`capacitor.config.ts` is provisional and must be replaced before publishing.
+
+Optional third-party lookup configuration belongs in `.env` and must never be committed. Android Health Connect uses on-device permissions rather than provider credentials. USDA lookups require a FoodData Central API key; the app remains useful without one through cached/custom foods. Journal GIF search uses an optional `VITE_GIPHY_API_KEY`; local image uploads and direct GIF URLs do not require a key.
 
 ## Architecture notes
 

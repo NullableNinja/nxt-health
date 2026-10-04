@@ -69,6 +69,8 @@ import type {
   BodyPhotoEntry,
   DreamJournalEntry,
   Food,
+  FastingSchedule,
+  PersonalWorkout,
   Goal,
   GoalKind,
   GenderIdentity,
@@ -114,6 +116,7 @@ import {
 } from '../data/medicationInteractionProvider'
 import {
   ACTIVITY_CATALOG_SOURCE,
+  estimateExerciseCalories,
   searchActivityCatalog,
   type ActivityCatalogItem,
 } from '../data/activityProvider'
@@ -138,8 +141,16 @@ import {
   sleepRepository,
   dreamJournalRepository,
   integrationConnectionRepository,
+  fastingScheduleRepository,
+  personalWorkoutRepository,
 } from '../data/repositories'
 import { providerCapabilities } from '../data/integrationProviders'
+import { healthConnectIsNative, syncHealthConnect } from '../data/healthConnect'
+import {
+  HEALTH_CONNECT_DATA_TYPES,
+  HealthConnect,
+  type HealthConnectDataType,
+} from '../platform/healthConnect'
 import {
   formatSleepDuration,
   sleepDurationMinutes,
@@ -581,7 +592,7 @@ function ageFromBirthDate(birthDate?: string) {
 }
 
 function effectiveProfileAge(profile: Pick<Profile, 'age' | 'birthDate'>) {
-  return profile.age ?? ageFromBirthDate(profile.birthDate)
+  return ageFromBirthDate(profile.birthDate) ?? profile.age
 }
 
 const foodProvider = new OpenFoodFactsProvider()
@@ -693,6 +704,20 @@ const formatHeight = (cm: number | undefined, unit: UnitSystem) => {
   const feet = Math.floor(totalInches / 12)
   const inches = round(totalInches - feet * 12, 1)
   return `${feet}′ ${inches}″`
+}
+
+function fastingPhase(schedule: FastingSchedule | undefined, at = new Date()) {
+  if (!schedule?.enabled) return undefined
+  const toMinutes = (value: string) => {
+    const [hours, minutes] = value.split(':').map(Number)
+    return hours * 60 + minutes
+  }
+  const start = toMinutes(schedule.fastingStart)
+  const end = toMinutes(schedule.eatingStart)
+  const current = at.getHours() * 60 + at.getMinutes()
+  const elapsed = (current - start + 1440) % 1440
+  const duration = (end - start + 1440) % 1440 || 1440
+  return elapsed < duration ? 'fasting' : 'eating'
 }
 
 const goalOptions: Array<{
@@ -894,6 +919,8 @@ function AppContent() {
   const [allFoodLogs, setAllFoodLogs] = useState<
     Awaited<ReturnType<typeof foodLogRepository.list>>
   >([])
+  const [fastingSchedule, setFastingSchedule] = useState<FastingSchedule>()
+  const [personalWorkouts, setPersonalWorkouts] = useState<PersonalWorkout[]>([])
   const [exercises, setExercises] = useState<Awaited<ReturnType<typeof exerciseRepository.list>>>(
     [],
   )
@@ -909,6 +936,7 @@ function AppContent() {
   const [bodyPhotos, setBodyPhotos] = useState<BodyPhotoEntry[]>([])
   const [medications, setMedications] = useState<MedicationSchedule[]>([])
   const [medicationLogs, setMedicationLogs] = useState<MedicationLog[]>([])
+  const [medicationHistoryLogs, setMedicationHistoryLogs] = useState<MedicationLog[]>([])
   const [sleepSessions, setSleepSessions] = useState<SleepSession[]>([])
   const [dreamJournalEntries, setDreamJournalEntries] = useState<DreamJournalEntry[]>([])
   const [integrationConnections, setIntegrationConnections] = useState<IntegrationConnection[]>([])
@@ -1008,9 +1036,12 @@ function AppContent() {
       storedBodyPhotos,
       storedMedications,
       storedMedicationLogs,
+      storedMedicationHistoryLogs,
       storedSleepSessions,
       storedIntegrationConnections,
       storedDreamJournalEntries,
+      storedFastingSchedule,
+      storedPersonalWorkouts,
     ] = await Promise.all([
       profileRepository.get(),
       goalRepository.list(),
@@ -1025,9 +1056,12 @@ function AppContent() {
       bodyPhotoRepository.list(),
       medicationRepository.list(),
       medicationRepository.listLogsForDate(today()),
+      medicationRepository.listLogs(),
       sleepRepository.list(),
       integrationConnectionRepository.list(),
       dreamJournalRepository.list(),
+      fastingScheduleRepository.get(),
+      personalWorkoutRepository.list(),
     ])
     setProfile(storedProfile)
     setGoals(storedGoals)
@@ -1078,10 +1112,69 @@ function AppContent() {
     setBodyPhotos(storedBodyPhotos)
     setMedications(storedMedications)
     setMedicationLogs(storedMedicationLogs)
+    setMedicationHistoryLogs(storedMedicationHistoryLogs)
     setSleepSessions(storedSleepSessions)
     setIntegrationConnections(storedIntegrationConnections)
     setDreamJournalEntries(storedDreamJournalEntries)
+    setFastingSchedule(storedFastingSchedule)
+    setPersonalWorkouts(storedPersonalWorkouts)
     setLoading(false)
+  }, [])
+
+  const connectHealthConnect = useCallback(async () => {
+    if (!healthConnectIsNative()) {
+      window.alert('Android Health Connect is available in the Android app, not in the browser build.')
+      return
+    }
+    const availability = await HealthConnect.isAvailable()
+    if (!availability.available) {
+      window.alert(
+        availability.status === 'provider-update-required'
+          ? 'Health Connect needs to be installed or updated on this Android device.'
+          : 'This Android device cannot use Health Connect.',
+      )
+      return
+    }
+
+    const permissionResult = await HealthConnect.requestPermissions({
+      dataTypes: [...HEALTH_CONNECT_DATA_TYPES] as HealthConnectDataType[],
+    })
+    const now = new Date().toISOString()
+    const existing = await integrationConnectionRepository.getByProvider('android-health-connect')
+    const connection: IntegrationConnection = {
+      id: existing?.id ?? newId(),
+      provider: 'android-health-connect' as const,
+      status: permissionResult.missing.length === 0 ? ('connected' as const) : ('needs-configuration' as const),
+      scopes: permissionResult.granted,
+      dataTypes: [...HEALTH_CONNECT_DATA_TYPES],
+      connectedAt: existing?.connectedAt ?? now,
+      lastVerifiedAt: now,
+      createdAt: existing?.createdAt ?? now,
+      updatedAt: now,
+      lastError:
+        permissionResult.missing.length > 0
+          ? `Missing permissions: ${permissionResult.missing.join(', ')}`
+          : undefined,
+    }
+
+    if (permissionResult.missing.length === 0) {
+      try {
+        const startTime = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString()
+        await syncHealthConnect(startTime, now)
+      } catch (error) {
+        connection.status = 'error'
+        connection.lastError = error instanceof Error ? error.message : 'Health Connect sync failed.'
+      }
+    }
+    await integrationConnectionRepository.save(connection)
+    setIntegrationConnections(await integrationConnectionRepository.list())
+    if (connection.status === 'connected') {
+      window.alert('Android Health Connect is connected. N//XT imported the last 30 days of approved data.')
+    } else if (connection.status === 'needs-configuration') {
+      window.alert('Health Connect is only partially connected. Approve the remaining data types in Health Connect settings.')
+    } else {
+      window.alert(`Health Connect connected, but the first sync failed: ${connection.lastError}`)
+    }
   }, [])
 
   useEffect(() => {
@@ -1296,6 +1389,16 @@ function AppContent() {
     await refresh()
   }
 
+  async function saveFastingSchedule(schedule: FastingSchedule) {
+    await fastingScheduleRepository.save(schedule)
+    await refresh()
+  }
+
+  async function savePersonalWorkout(workout: PersonalWorkout) {
+    await personalWorkoutRepository.save(workout)
+    await refresh()
+  }
+
   async function toggleGoal(goal: Goal) {
     await goalRepository.save({ ...goal, active: !goal.active })
     await refresh()
@@ -1440,19 +1543,6 @@ function AppContent() {
       context: 'mindfulness',
       note,
       payload: { kind: 'guided-skill', technique: title },
-    })
-    await refresh()
-  }
-
-  async function saveBreathingSession(mode: string, seconds: number) {
-    await captureRepository.add({
-      type: 'custom',
-      occurredAt: new Date().toISOString(),
-      title: `Breathing rhythm · ${mode}`,
-      source: 'manual',
-      context: 'mindfulness',
-      note: 'A self-guided breathing rhythm session.',
-      payload: { mode, seconds },
     })
     await refresh()
   }
@@ -2018,10 +2108,18 @@ function AppContent() {
             onRemoveFoodLog={removeFoodLog}
             onImportMyFitnessPal={importMyFitnessPal}
             onNavigate={navigate}
+            fastingSchedule={fastingSchedule}
+            onSaveFastingSchedule={saveFastingSchedule}
           />
         )}
         {screen === 'activity' && (
-          <ActivityPage exercises={exercises} onAddExercise={addExercise} />
+          <ActivityPage
+            exercises={exercises}
+            bodyWeightKg={latestWeight}
+            personalWorkouts={personalWorkouts}
+            onAddExercise={addExercise}
+            onSavePersonalWorkout={savePersonalWorkout}
+          />
         )}
         {screen === 'sleep' && (
           <SleepPage
@@ -2038,7 +2136,6 @@ function AppContent() {
             supportStyle={profile.supportStyle ?? 'gentle'}
             workspaceTheme={workspaceTheme}
             onJournal={saveJournalEntry}
-            onBreathingSession={saveBreathingSession}
             onSkillPractice={saveMindSkillPractice}
             onDeleteCapture={removeCapture}
             onUpdateCapture={editCapture}
@@ -2051,6 +2148,7 @@ function AppContent() {
           <MedicationsPage
             medications={medications}
             medicationLogs={medicationLogs}
+            medicationHistoryLogs={medicationHistoryLogs}
             onSaveMedication={saveMedication}
             onRemoveMedication={removeMedication}
             onLogMedication={logMedication}
@@ -2061,6 +2159,7 @@ function AppContent() {
             profile={profile}
             goals={goals}
             integrationConnections={integrationConnections}
+            onConnectHealthConnect={connectHealthConnect}
             onNavigate={navigate}
             onToggleGoal={toggleGoal}
             onSaveProfile={saveProfile}
@@ -3036,6 +3135,14 @@ function Today({
     trend.rateKgPerWeek === undefined
       ? 'Collecting trend'
       : `${trend.rateKgPerWeek > 0 ? '+' : ''}${round(profile.unitSystem === 'imperial' ? kgToPounds(trend.rateKgPerWeek) : trend.rateKgPerWeek, 1)} ${profile.unitSystem === 'imperial' ? 'lb' : 'kg'}/wk`
+  const missingMetabolicContext = [
+    effectiveProfileAge(profile) === undefined ? 'birth date or age' : '',
+    profile.heightCm === undefined ? 'height' : '',
+    trend.latestKg === undefined ? 'a weight reading' : '',
+  ].filter(Boolean)
+  const missingMetabolicDescription = missingMetabolicContext.length
+    ? missingMetabolicContext.join(', ')
+    : 'the remaining profile context'
   return (
     <div className="page today-page">
       <section className="welcome-row">
@@ -3154,7 +3261,10 @@ function Today({
           <CircleHelp size={18} />
           <div>
             <strong>One more detail will unlock estimates.</strong>
-            <span>Add age and height in Profile to see transparent metabolic starting points.</span>
+            <span>
+              Add {missingMetabolicDescription} in Profile to see transparent metabolic
+              starting points.
+            </span>
           </div>
           <button onClick={() => onNavigate('profile')}>Review profile</button>
         </div>
@@ -4486,6 +4596,7 @@ function BodyPhotoCapture({
   const [note, setNote] = useState('')
   const [pose, setPose] = useState<BodyPhotoEntry['pose']>('front')
   const [error, setError] = useState('')
+  const cameraInputRef = useRef<HTMLInputElement>(null)
   function readPhoto(file: File | undefined) {
     if (!file) return
     if (!file.type.startsWith('image/')) {
@@ -4537,16 +4648,32 @@ function BodyPhotoCapture({
           </select>
         </label>
       </div>
-      <div className="two-col">
-        <label>
-          Photo
+      <div className="photo-input-actions">
+        <button
+          type="button"
+          className="primary-button"
+          onClick={() => cameraInputRef.current?.click()}
+        >
+          <Camera size={17} /> Take photo
+        </button>
+        <label className="secondary-button">
+          Choose from device
           <input
+            className="sr-only"
             type="file"
             accept="image/*"
-            capture="environment"
             onChange={(event) => readPhoto(event.target.files?.[0])}
           />
         </label>
+        <input
+          ref={cameraInputRef}
+          className="sr-only"
+          type="file"
+          accept="image/*"
+          capture="environment"
+          aria-label="Take body photo"
+          onChange={(event) => readPhoto(event.target.files?.[0])}
+        />
       </div>
       <label>
         Note (optional)
@@ -4995,27 +5122,32 @@ function NutritionPage({
   foods,
   logs,
   target,
+  fastingSchedule,
   onAddFood,
   onSaveFood,
   onRemoveFood,
   onRemoveFoodLog,
   onImportMyFitnessPal,
   onNavigate,
+  onSaveFastingSchedule,
 }: {
   foods: Food[]
   logs: Awaited<ReturnType<typeof foodLogRepository.list>>
   target?: number
+  fastingSchedule?: FastingSchedule
   onAddFood: (food: Food, servings: number, meal: string, date?: string) => Promise<void>
   onSaveFood: (food: Food) => Promise<void>
   onRemoveFood: (id: string) => Promise<void>
   onRemoveFoodLog: (id: string) => Promise<void>
   onImportMyFitnessPal: (file: File) => Promise<void>
   onNavigate: (screen: Screen) => void
+  onSaveFastingSchedule: (schedule: FastingSchedule) => Promise<void>
 }) {
   const confirmDelete = useDeleteConfirmation()
   const [query, setQuery] = useState('')
   const [barcode, setBarcode] = useState('')
   const [scannerOpen, setScannerOpen] = useState(false)
+  const scannerSectionRef = useRef<HTMLDivElement>(null)
   const [remoteFoods, setRemoteFoods] = useState<Food[]>([])
   const [submittedQuery, setSubmittedQuery] = useState('')
   const [providerState, setProviderState] = useState<'idle' | 'loading' | 'error'>('idle')
@@ -5036,6 +5168,17 @@ function NutritionPage({
   const [servings, setServings] = useState('1')
   const [meal, setMeal] = useState('Snack')
   const [selectedDate, setSelectedDate] = useState(today())
+  const [fastingEnabled, setFastingEnabled] = useState(fastingSchedule?.enabled ?? false)
+  const [fastingStart, setFastingStart] = useState(fastingSchedule?.fastingStart ?? '20:00')
+  const [eatingStart, setEatingStart] = useState(fastingSchedule?.eatingStart ?? '12:00')
+  const [fastingReminders, setFastingReminders] = useState(
+    fastingSchedule?.reminderEnabled ?? true,
+  )
+  const [fastingReminderMinutes, setFastingReminderMinutes] = useState(
+    String(fastingSchedule?.reminderMinutesBefore ?? 15),
+  )
+  const [fastingStatus, setFastingStatus] = useState('')
+  const [fastingNotificationStatus, setFastingNotificationStatus] = useState('')
   const [visibleSections, setVisibleSections] = useSectionVisibility('nxt-nutrition-sections', [
     'planner',
     'search',
@@ -5050,6 +5193,73 @@ function NutritionPage({
   const dateLogs = logs.filter((log) => log.date === selectedDate)
   const totals = calculateDailyNutritionTotals(logs, selectedDate)
   const mealSummaries = summarizeMeals(logs, selectedDate)
+  useEffect(() => {
+    if (!fastingSchedule) return
+    setFastingEnabled(fastingSchedule.enabled)
+    setFastingStart(fastingSchedule.fastingStart)
+    setEatingStart(fastingSchedule.eatingStart)
+    setFastingReminders(fastingSchedule.reminderEnabled)
+    setFastingReminderMinutes(String(fastingSchedule.reminderMinutesBefore))
+  }, [fastingSchedule])
+  useEffect(() => {
+    if (!fastingSchedule?.enabled || !fastingSchedule.reminderEnabled) return undefined
+    const checkReminder = () => {
+      const now = new Date()
+      const current = now.getHours() * 60 + now.getMinutes()
+      const lead = fastingSchedule.reminderMinutesBefore
+      for (const boundary of [fastingSchedule.fastingStart, fastingSchedule.eatingStart]) {
+        const [hours, minutes] = boundary.split(':').map(Number)
+        const boundaryMinutes = hours * 60 + minutes
+        const distance = (boundaryMinutes - current + 1440) % 1440
+        if (distance > 0 && distance <= lead && distance >= lead - 1) {
+          const key = `nxt-fasting-reminder:${today()}:${boundary}`
+          if (window.sessionStorage.getItem(key)) continue
+          window.sessionStorage.setItem(key, 'sent')
+          if ('Notification' in window && Notification.permission === 'granted') {
+            new Notification('Fasting schedule reminder', {
+              body: `Your ${boundary === fastingSchedule.fastingStart ? 'fasting' : 'eating'} window begins at ${boundary}.`,
+            })
+          }
+        }
+      }
+    }
+    checkReminder()
+    const interval = window.setInterval(checkReminder, 60_000)
+    return () => window.clearInterval(interval)
+  }, [fastingSchedule])
+  async function saveFastingSettings() {
+    const now = new Date().toISOString()
+    await onSaveFastingSchedule({
+      id: fastingSchedule?.id ?? 'fasting-schedule',
+      enabled: fastingEnabled,
+      fastingStart,
+      eatingStart,
+      reminderEnabled: fastingReminders,
+      reminderMinutesBefore: Math.max(5, Number(fastingReminderMinutes) || 15),
+      createdAt: fastingSchedule?.createdAt ?? now,
+      updatedAt: now,
+    })
+    setFastingStatus('Fasting schedule saved on this device.')
+  }
+  async function enableFastingNotifications() {
+    if (!('Notification' in window)) {
+      setFastingNotificationStatus('This device does not support browser notifications.')
+      return
+    }
+    const permission = await Notification.requestPermission()
+    setFastingNotificationStatus(
+      permission === 'granted'
+        ? 'Gentle fasting reminders are enabled on this device.'
+        : 'Notifications stayed off. The schedule will still be visible here.',
+    )
+  }
+  useEffect(() => {
+    if (!scannerOpen) return
+    const frame = window.requestAnimationFrame(() =>
+      scannerSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }),
+    )
+    return () => window.cancelAnimationFrame(frame)
+  }, [scannerOpen])
   useEffect(() => {
     void consentRepository
       .list()
@@ -5148,6 +5358,77 @@ function NutritionPage({
           )
         }
       />
+      <section className="panel fasting-panel" aria-labelledby="fasting-heading">
+        <div className="panel-heading">
+          <div>
+            <p className="eyebrow">Food timing</p>
+            <h3 id="fasting-heading">Intermittent fasting, on your terms.</h3>
+          </div>
+          <span className={`fasting-status-pill ${fastingPhase(fastingSchedule) ?? 'off'}`}>
+            {fastingSchedule?.enabled
+              ? fastingPhase(fastingSchedule) === 'fasting'
+                ? 'Fasting now'
+                : 'Eating window'
+              : 'Off'}
+          </span>
+        </div>
+        <p className="muted compact-copy">
+          Set a routine if it helps you. N//XT will show the current window and offer quiet reminders;
+          it will not judge meals or turn the schedule into a goal.
+        </p>
+        <div className="fasting-settings-grid">
+          <label className="fasting-toggle">
+            <input
+              type="checkbox"
+              checked={fastingEnabled}
+              onChange={(event) => setFastingEnabled(event.target.checked)}
+            />
+            <span>
+              <strong>Use an eating window</strong>
+              <small>Saved locally and easy to change.</small>
+            </span>
+          </label>
+          <label>
+            Fast begins
+            <input type="time" value={fastingStart} onChange={(event) => setFastingStart(event.target.value)} />
+          </label>
+          <label>
+            Eating window begins
+            <input type="time" value={eatingStart} onChange={(event) => setEatingStart(event.target.value)} />
+          </label>
+          <label>
+            Reminder lead time
+            <select
+              value={fastingReminderMinutes}
+              onChange={(event) => setFastingReminderMinutes(event.target.value)}
+            >
+              <option value="5">5 minutes</option>
+              <option value="15">15 minutes</option>
+              <option value="30">30 minutes</option>
+            </select>
+          </label>
+        </div>
+        <label className="fasting-reminder-toggle">
+          <input
+            type="checkbox"
+            checked={fastingReminders}
+            onChange={(event) => setFastingReminders(event.target.checked)}
+          />
+          <span>Offer gentle reminders at the start of each window</span>
+        </label>
+        <div className="button-row fasting-actions">
+          <button className="primary-button" onClick={() => void saveFastingSettings()}>
+            Save schedule
+          </button>
+          {fastingReminders && (
+            <button className="secondary-button" onClick={() => void enableFastingNotifications()}>
+              <BellRing size={16} /> Allow notifications
+            </button>
+          )}
+          {fastingStatus && <span className="form-success">{fastingStatus}</span>}
+        </div>
+        {fastingNotificationStatus && <p className="muted compact-copy">{fastingNotificationStatus}</p>}
+      </section>
       {visibleSections.includes('planner') && (
         <section className="panel nutrition-date-panel" id="nutrition-planner">
           <div>
@@ -5440,16 +5721,18 @@ function NutritionPage({
                   </button>
                 </div>
               )}
-              {scannerOpen && (
-                <BarcodeScanner
-                  onDetected={(value) => {
-                    setBarcode(value)
-                    setScannerOpen(false)
-                    void lookupBarcode(value)
-                  }}
-                  onClose={() => setScannerOpen(false)}
-                />
-              )}
+              <div ref={scannerSectionRef}>
+                {scannerOpen && (
+                  <BarcodeScanner
+                    onDetected={(value) => {
+                      setBarcode(value)
+                      setScannerOpen(false)
+                      void lookupBarcode(value)
+                    }}
+                    onClose={() => setScannerOpen(false)}
+                  />
+                )}
+              </div>
               {providerState === 'loading' && (
                 <p className="provider-note" role="status" aria-live="polite">
                   Looking up food information…
@@ -5629,11 +5912,7 @@ function NutritionPage({
   )
 }
 
-function BreathingRhythm({
-  onSessionEnd,
-}: {
-  onSessionEnd: (mode: string, seconds: number) => Promise<void>
-}) {
+function BreathingRhythm() {
   type BreathingMode =
     | 'calm'
     | 'box'
@@ -5649,7 +5928,6 @@ function BreathingRhythm({
   const [mode, setMode] = useState<BreathingMode>('calm')
   const [running, setRunning] = useState(false)
   const [seconds, setSeconds] = useState(0)
-  const recordedSeconds = useRef(0)
   const phaseSets: Record<BreathingMode, BreathPhase[]> = {
     calm: [
       { label: 'Inhale', duration: 4 },
@@ -5732,28 +6010,18 @@ function BreathingRhythm({
   }, [running])
 
   function changeMode(next: BreathingMode) {
-    if (seconds > recordedSeconds.current) {
-      recordedSeconds.current = seconds
-      void onSessionEnd(mode, seconds)
-    }
     setMode(next)
     setSeconds(0)
     setRunning(false)
-    recordedSeconds.current = 0
   }
 
   function endSession() {
-    if (seconds > recordedSeconds.current) {
-      recordedSeconds.current = seconds
-      void onSessionEnd(mode, seconds)
-    }
     setRunning(false)
   }
 
   function resetSession() {
     endSession()
     setSeconds(0)
-    recordedSeconds.current = 0
   }
 
   return (
@@ -5877,7 +6145,7 @@ function BreathingRhythm({
               className="primary-button"
               onClick={() => (running ? endSession() : setRunning(true))}
             >
-              {running ? 'Pause & save' : 'Begin'}
+              {running ? 'Pause' : 'Begin'}
             </button>
             <button className="secondary-button" onClick={resetSession}>
               Reset
@@ -5893,7 +6161,6 @@ function MindPreview({
   supportStyle,
   workspaceTheme,
   onJournal,
-  onBreathingSession,
   onSkillPractice,
   onDeleteCapture,
   onUpdateCapture,
@@ -5904,7 +6171,6 @@ function MindPreview({
   supportStyle: SupportStyle
   workspaceTheme: WorkspaceTheme
   onJournal: (note: string, tags: string[], date: string, checkIn?: JournalCheckIn) => Promise<void>
-  onBreathingSession: (mode: string, seconds: number) => Promise<void>
   onSkillPractice: (title: string, answers: string[]) => Promise<void>
   onDeleteCapture: (id: string) => Promise<void>
   onUpdateCapture: (entry: CaptureEntry) => Promise<void>
@@ -6218,7 +6484,7 @@ function MindPreview({
           )
         }
       />
-      <BreathingRhythm onSessionEnd={onBreathingSession} />
+      <BreathingRhythm />
       {visibleSections.includes('skills') && (
         <div id="practical-skills">
           <ContemplativeSkills onSavePractice={onSkillPractice} />
@@ -7684,6 +7950,21 @@ function MarkdownEditor({
     })
   }
 
+  function handleMarkdownKeyDown(event: React.KeyboardEvent<HTMLTextAreaElement>) {
+    if (!(event.ctrlKey || event.metaKey)) return
+    const key = event.key.toLowerCase()
+    if (key === 'b') {
+      event.preventDefault()
+      insertMarkdown('**', '**', 'bold text')
+    } else if (key === 'i') {
+      event.preventDefault()
+      insertMarkdown('*', '*', 'italic text')
+    } else if (key === 'k') {
+      event.preventDefault()
+      insertMarkdown('[', '](https://example.com)', 'link text')
+    }
+  }
+
   function insertTable() {
     insertMarkdown('| Column | Column |\n| --- | --- |\n| Cell | Cell |\n', '', '')
   }
@@ -7773,6 +8054,7 @@ function MarkdownEditor({
             value={value}
             aria-label="Journal entry"
             onChange={(event) => onChange(event.target.value)}
+            onKeyDown={handleMarkdownKeyDown}
             placeholder="Write here… or use the prompt above to start with a question."
           />
           <div className="markdown-toolbar" aria-label="Markdown shortcuts">
@@ -8960,26 +9242,35 @@ function activityCategory(label: string): ActivityCategory {
   return 'other'
 }
 
-const QUICK_ACTIVITY_OPTIONS = [
-  'Walking',
-  'Strength training',
-  'Martial arts',
-  'Cardio kickboxing',
-  'Zumba',
-  'Yoga',
-]
-
 function ActivityPage({
   exercises,
+  bodyWeightKg,
+  personalWorkouts,
   onAddExercise,
+  onSavePersonalWorkout,
 }: {
   exercises: Awaited<ReturnType<typeof exerciseRepository.list>>
+  bodyWeightKg?: number
+  personalWorkouts: PersonalWorkout[]
   onAddExercise: (entry: Omit<Parameters<typeof exerciseRepository.add>[0], 'id'>) => Promise<void>
+  onSavePersonalWorkout: (workout: PersonalWorkout) => Promise<void>
 }) {
   const [activityType, setActivityType] = useState('')
   const [duration, setDuration] = useState('30')
   const [intensity, setIntensity] = useState<'easy' | 'moderate' | 'hard'>('moderate')
   const [activityNote, setActivityNote] = useState('')
+  const [selectedCatalogItem, setSelectedCatalogItem] = useState<ActivityCatalogItem>()
+  const [selectedPersonalWorkout, setSelectedPersonalWorkout] = useState<PersonalWorkout>()
+  const [customWorkoutOpen, setCustomWorkoutOpen] = useState(false)
+  const [customWorkout, setCustomWorkout] = useState({
+    name: '',
+    category: 'Custom',
+    durationMinutes: '30',
+    intensity: 'moderate' as PersonalWorkout['intensity'],
+    estimatedCalories: '',
+    note: '',
+  })
+  const customWorkoutDialogRef = useRef<HTMLElement>(null)
   const [showTargets, setShowTargets] = useState(false)
   const [ringTargets, setRingTargets] = useState(() => {
     try {
@@ -9027,6 +9318,9 @@ function ActivityPage({
     intensityBalance: balance,
     recentTrend: trend,
   })
+  const noSearchResults =
+    catalogQuery.trim().length >= 2 && catalogState === 'idle' && catalogResults.length === 0
+  useDialogFocus(customWorkoutDialogRef, () => setCustomWorkoutOpen(false), customWorkoutOpen)
   useEffect(() => {
     window.localStorage.setItem('nxt-activity-ring-targets', JSON.stringify(ringTargets))
   }, [ringTargets])
@@ -9060,22 +9354,72 @@ function ActivityPage({
     }
   }, [catalogQuery])
   async function submit() {
+    const personalCalories = selectedPersonalWorkout?.estimatedCalories
+      ? Math.round(
+          selectedPersonalWorkout.estimatedCalories *
+            (Number(duration) / Math.max(1, selectedPersonalWorkout.defaultDurationMinutes)),
+        )
+      : undefined
     await onAddExercise({
       date: today(),
       activityType: activityType.trim(),
       durationMinutes: Number(duration),
       intensity,
+      estimatedCalories:
+        personalCalories ??
+        estimateExerciseCalories(selectedCatalogItem?.metValue, bodyWeightKg, Number(duration)),
       note: activityNote.trim() || undefined,
     })
     setActivityType('')
     setCatalogQuery('')
     setDuration('30')
     setActivityNote('')
+    setSelectedCatalogItem(undefined)
   }
   function chooseActivity(name: string) {
     setActivityType(name)
+    setSelectedPersonalWorkout(undefined)
+    setSelectedCatalogItem(catalogResults.find((item) => item.name === name))
     setCatalogQuery('')
     setCatalogResults([])
+  }
+  function choosePersonalWorkout(workout: PersonalWorkout) {
+    setActivityType(workout.name)
+    setSelectedPersonalWorkout(workout)
+    setSelectedCatalogItem(undefined)
+    setDuration(String(workout.defaultDurationMinutes))
+    setIntensity(workout.intensity)
+    setActivityNote(workout.note ?? '')
+    setCatalogQuery('')
+    setCatalogResults([])
+  }
+  async function saveCustomWorkout() {
+    const durationMinutes = Number(customWorkout.durationMinutes)
+    const estimatedCalories = Number(customWorkout.estimatedCalories)
+    if (!customWorkout.name.trim() || durationMinutes <= 0 || estimatedCalories < 0) return
+    const now = new Date().toISOString()
+    const workout: PersonalWorkout = {
+      id: newId(),
+      name: customWorkout.name.trim(),
+      category: customWorkout.category.trim() || 'Custom',
+      defaultDurationMinutes: durationMinutes,
+      intensity: customWorkout.intensity,
+      estimatedCalories,
+      note: customWorkout.note.trim() || undefined,
+      createdAt: now,
+      updatedAt: now,
+    }
+    await onSavePersonalWorkout(workout)
+    choosePersonalWorkout(workout)
+    setCustomWorkoutOpen(false)
+    setCustomWorkout({
+      name: '',
+      category: 'Custom',
+      durationMinutes: '30',
+      intensity: 'moderate',
+      estimatedCalories: '',
+      note: '',
+    })
   }
   return (
     <div className="page">
@@ -9141,8 +9485,10 @@ function ActivityPage({
                   <Search size={17} aria-hidden="true" />
                   <input
                     value={activityType}
-                    onChange={(event) => {
-                      setActivityType(event.target.value)
+                  onChange={(event) => {
+                    setActivityType(event.target.value)
+                    setSelectedCatalogItem(undefined)
+                    setSelectedPersonalWorkout(undefined)
                       setCatalogQuery(event.target.value)
                     }}
                     onKeyDown={(event) => {
@@ -9161,19 +9507,30 @@ function ActivityPage({
                   Search by activity or category. You can also type anything custom.
                 </small>
               </label>
-              <div className="activity-quick-picks" aria-label="Common activities">
-                <span>Try one</span>
-                {QUICK_ACTIVITY_OPTIONS.map((option) => (
-                  <button
-                    type="button"
-                    key={option}
-                    className={activityType === option ? 'selected' : ''}
-                    onClick={() => chooseActivity(option)}
-                  >
-                    {option}
-                  </button>
-                ))}
-              </div>
+              {personalWorkouts.length > 0 && (
+                <div className="personal-workout-library" aria-label="Personal workouts">
+                  <div className="personal-workout-library-heading">
+                    <span>Personal workouts</span>
+                    <small>Saved on this device</small>
+                  </div>
+                  <div className="personal-workout-list">
+                    {personalWorkouts.map((workout) => (
+                      <button
+                        type="button"
+                        key={workout.id}
+                        className={selectedPersonalWorkout?.id === workout.id ? 'selected' : ''}
+                        onClick={() => choosePersonalWorkout(workout)}
+                      >
+                        <strong>{workout.name}</strong>
+                        <small>
+                          {workout.category} · {workout.defaultDurationMinutes} min ·{' '}
+                          {workout.estimatedCalories ?? 0} kcal
+                        </small>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
             <div className="activity-details-grid">
               <label className="activity-detail-field activity-duration-field">
@@ -9225,6 +9582,24 @@ function ActivityPage({
             <p className="form-error" role="alert" aria-live="assertive">
               Search is temporarily unavailable. You can still enter any activity by hand.
             </p>
+          )}
+          {noSearchResults && (
+            <div className="activity-no-results" role="status">
+              <div>
+                <strong>No match in the exercise library</strong>
+                <small>Save “{catalogQuery.trim()}” to your personal workouts.</small>
+              </div>
+              <button
+                type="button"
+                className="secondary-button"
+                onClick={() => {
+                  setCustomWorkout((current) => ({ ...current, name: catalogQuery.trim() }))
+                  setCustomWorkoutOpen(true)
+                }}
+              >
+                Add to my workouts
+              </button>
+            </div>
           )}
           {catalogResults.length > 0 && (
             <div
@@ -9280,6 +9655,140 @@ function ActivityPage({
             </button>
           </div>
         </section>
+      )}
+      {customWorkoutOpen && (
+        <div
+          className="sheet-backdrop"
+          role="presentation"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) setCustomWorkoutOpen(false)
+          }}
+        >
+          <section
+            ref={customWorkoutDialogRef}
+            className="custom-workout-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="custom-workout-title"
+          >
+            <div className="panel-heading">
+              <div>
+                <p className="eyebrow">Personal workout</p>
+                <h2 id="custom-workout-title">Add a workout to your list.</h2>
+              </div>
+              <button
+                type="button"
+                className="icon-button"
+                aria-label="Close add workout dialog"
+                onClick={() => setCustomWorkoutOpen(false)}
+              >
+                <X size={18} />
+              </button>
+            </div>
+            <p className="muted compact-copy">
+              Save the details you want to reuse. Calories are your own estimate for the default
+              duration and will scale if you log a different duration later.
+            </p>
+            <div className="two-col">
+              <label>
+                Workout name
+                <input
+                  autoFocus
+                  value={customWorkout.name}
+                  onChange={(event) =>
+                    setCustomWorkout((current) => ({ ...current, name: event.target.value }))
+                  }
+                />
+              </label>
+              <label>
+                Category
+                <input
+                  value={customWorkout.category}
+                  onChange={(event) =>
+                    setCustomWorkout((current) => ({ ...current, category: event.target.value }))
+                  }
+                  placeholder="Cardio, strength, sport…"
+                />
+              </label>
+            </div>
+            <div className="three-col">
+              <label>
+                Default duration
+                <input
+                  type="number"
+                  min="1"
+                  value={customWorkout.durationMinutes}
+                  onChange={(event) =>
+                    setCustomWorkout((current) => ({
+                      ...current,
+                      durationMinutes: event.target.value,
+                    }))
+                  }
+                />
+              </label>
+              <label>
+                Calories burned
+                <input
+                  type="number"
+                  min="0"
+                  value={customWorkout.estimatedCalories}
+                  onChange={(event) =>
+                    setCustomWorkout((current) => ({
+                      ...current,
+                      estimatedCalories: event.target.value,
+                    }))
+                  }
+                  placeholder="e.g. 250"
+                />
+              </label>
+              <label>
+                Intensity
+                <select
+                  value={customWorkout.intensity}
+                  onChange={(event) =>
+                    setCustomWorkout((current) => ({
+                      ...current,
+                      intensity: event.target.value as PersonalWorkout['intensity'],
+                    }))
+                  }
+                >
+                  <option value="easy">Easy</option>
+                  <option value="moderate">Moderate</option>
+                  <option value="hard">Hard</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              Notes <small>Optional</small>
+              <textarea
+                rows={3}
+                value={customWorkout.note}
+                onChange={(event) =>
+                  setCustomWorkout((current) => ({ ...current, note: event.target.value }))
+                }
+                placeholder="Equipment, class format, or anything useful to remember"
+              />
+            </label>
+            <div className="button-row custom-workout-actions">
+              <button type="button" className="secondary-button" onClick={() => setCustomWorkoutOpen(false)}>
+                Cancel
+              </button>
+              <button
+                type="button"
+                className="primary-button"
+                disabled={
+                  !customWorkout.name.trim() ||
+                  Number(customWorkout.durationMinutes) <= 0 ||
+                  Number(customWorkout.estimatedCalories) < 0 ||
+                  customWorkout.estimatedCalories === ''
+                }
+                onClick={() => void saveCustomWorkout()}
+              >
+                Save workout
+              </button>
+            </div>
+          </section>
+        </div>
       )}
       {visibleSections.includes('rings') && (
         <section className="panel activity-dashboard" id="activity-rings">
@@ -9529,6 +10038,7 @@ function ProfilePage({
   profile,
   goals,
   integrationConnections,
+  onConnectHealthConnect,
   onNavigate,
   onToggleGoal,
   onSaveProfile,
@@ -9536,6 +10046,7 @@ function ProfilePage({
   profile: Profile
   goals: Goal[]
   integrationConnections: IntegrationConnection[]
+  onConnectHealthConnect: () => Promise<void>
   onNavigate: (screen: Screen) => void
   onToggleGoal: (goal: Goal) => Promise<void>
   onSaveProfile: (changes: Partial<Profile>) => Promise<void>
@@ -9577,7 +10088,7 @@ function ProfilePage({
   const profileCompletion = [
     profile.displayName,
     profile.headline,
-    profile.age,
+    displayedAge,
     profile.birthDate,
     profile.heightCm,
     profile.sexAssignedAtBirth,
@@ -10106,7 +10617,7 @@ function ProfilePage({
               )
               const status = connection?.status ?? capability.status
               const statusLabel = status.replaceAll('-', ' ')
-              const canImport = capability.provider === 'file-import'
+              const isHealthConnect = capability.provider === 'android-health-connect'
               return (
                 <article
                   className={`integration-card integration-status-${status}`}
@@ -10124,10 +10635,10 @@ function ProfilePage({
                   <p>{capability.notes}</p>
                   <small>Reads: {capability.reads.join(' · ')}</small>
                   <div className="integration-card-actions">
-                    {canImport ? (
-                      <span className="integration-status-note">
-                        Use Data tools to import a file
-                      </span>
+                    {isHealthConnect ? (
+                      <button className="secondary-button" type="button" onClick={() => void onConnectHealthConnect()}>
+                        {status === 'connected' ? 'Sync now' : 'Connect Health Connect'}
+                      </button>
                     ) : (
                       <span className="integration-status-note">
                         {status === 'connected'
@@ -10135,9 +10646,11 @@ function ProfilePage({
                           : 'Connection not available yet'}
                       </span>
                     )}
-                    <a href={capability.officialDocsUrl} target="_blank" rel="noreferrer">
-                      Official setup <ChevronRight size={15} />
-                    </a>
+                    {isHealthConnect && (
+                      <a href={capability.officialDocsUrl} target="_blank" rel="noreferrer">
+                        Official setup <ChevronRight size={15} />
+                      </a>
+                    )}
                   </div>
                 </article>
               )
@@ -10152,17 +10665,20 @@ function ProfilePage({
 function MedicationsPage({
   medications,
   medicationLogs,
+  medicationHistoryLogs,
   onSaveMedication,
   onRemoveMedication,
   onLogMedication,
 }: {
   medications: MedicationSchedule[]
   medicationLogs: MedicationLog[]
+  medicationHistoryLogs: MedicationLog[]
   onSaveMedication: (entry: MedicationSchedule) => Promise<void>
   onRemoveMedication: (id: string) => Promise<void>
   onLogMedication: (entry: Omit<MedicationLog, 'id'>) => Promise<void>
 }) {
   const [selectedLookup, setSelectedLookup] = useState<MedicationLookupResult>()
+  const [lookupFactsMedication, setLookupFactsMedication] = useState<MedicationSchedule>()
   const [visibleSections, setVisibleSections] = useSectionVisibility('nxt-medication-sections', [
     'overview',
     'tracker',
@@ -10244,6 +10760,7 @@ function MedicationsPage({
         <MedicationTracker
           medications={medications}
           medicationLogs={medicationLogs}
+          medicationHistoryLogs={medicationHistoryLogs}
           prefill={selectedLookup}
           onPrefillConsumed={() => setSelectedLookup(undefined)}
           onSave={onSaveMedication}
@@ -10259,11 +10776,31 @@ function MedicationsPage({
             if (!visibleSections.includes('tracker'))
               setVisibleSections((current) => [...current, 'tracker'])
           }}
+          onInspect={(result) =>
+            setLookupFactsMedication({
+              id: `lookup-${result.id}`,
+              name: result.name,
+              dose: '',
+              frequency: 'daily',
+              times: [],
+              reminderEnabled: false,
+              active: true,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString(),
+              reference: { externalId: result.sourceId },
+            })
+          }
           onCancel={() => setSelectedLookup(undefined)}
         />
       )}
       {visibleSections.includes('safety') && (
         <MedicationInteractionPanel medications={medications} />
+      )}
+      {lookupFactsMedication && (
+        <MedicationFactsDrawer
+          medication={lookupFactsMedication}
+          onClose={() => setLookupFactsMedication(undefined)}
+        />
       )}
     </div>
   )
@@ -10414,10 +10951,12 @@ function MedicationInteractionPanel({ medications }: { medications: MedicationSc
 function MedicationLookupPanel({
   selected,
   onSelect,
+  onInspect,
   onCancel,
 }: {
   selected?: MedicationLookupResult
   onSelect: (result: MedicationLookupResult) => void
+  onInspect: (result: MedicationLookupResult) => void
   onCancel: () => void
 }) {
   const [query, setQuery] = useState('')
@@ -10538,9 +11077,14 @@ function MedicationLookupPanel({
         </p>
       )}
       {selected && (
-        <p className="form-success">
-          Selected {selected.name}. It is ready to use in the schedule form below.
-        </p>
+        <div className="medication-lookup-selected">
+          <p className="form-success">
+            Selected {selected.name}. It is ready to use in the schedule form below.
+          </p>
+          <button className="text-button" onClick={() => onInspect(selected)}>
+            View official FDA facts now <ChevronRight size={15} />
+          </button>
+        </div>
       )}
       {results.length > 0 && (
         <div className="medication-lookup-results" aria-label="Medication reference results">
@@ -10821,9 +11365,45 @@ function SettingsPage({
   )
 }
 
+function medicationDateKey(offsetDays: number) {
+  const date = new Date()
+  date.setHours(12, 0, 0, 0)
+  date.setDate(date.getDate() + offsetDays)
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
+function medicationIsScheduledOnDate(medication: MedicationSchedule, date: string) {
+  if (medication.frequency === 'as-needed') return false
+  if (medication.frequency === 'weekdays') {
+    const day = new Date(`${date}T12:00:00`).getDay()
+    return day >= 1 && day <= 5
+  }
+  if (medication.frequency === 'custom' && medication.daysOfWeek?.length) {
+    return medication.daysOfWeek.includes(new Date(`${date}T12:00:00`).getDay())
+  }
+  return true
+}
+
+function medicationTimeMinutes(time: string) {
+  const [hours, minutes] = time.split(':').map(Number)
+  return (hours || 0) * 60 + (minutes || 0)
+}
+
+function medicationTimeLabel(time: string) {
+  const [hours, minutes] = time.split(':').map(Number)
+  if (!Number.isFinite(hours) || !Number.isFinite(minutes)) return time
+  const date = new Date()
+  date.setHours(hours, minutes, 0, 0)
+  return date.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
+}
+
 function MedicationTracker({
   medications,
   medicationLogs,
+  medicationHistoryLogs,
   prefill,
   onPrefillConsumed,
   onSave,
@@ -10832,6 +11412,7 @@ function MedicationTracker({
 }: {
   medications: MedicationSchedule[]
   medicationLogs: MedicationLog[]
+  medicationHistoryLogs: MedicationLog[]
   prefill?: MedicationLookupResult
   onPrefillConsumed?: () => void
   onSave: (entry: MedicationSchedule) => Promise<void>
@@ -10845,20 +11426,97 @@ function MedicationTracker({
   const [times, setTimes] = useState('08:00')
   const [frequency, setFrequency] = useState<MedicationFrequency>('daily')
   const [instructions, setInstructions] = useState('')
+  const [supplyRemaining, setSupplyRemaining] = useState('')
+  const [refillAt, setRefillAt] = useState('')
   const [reminderEnabled, setReminderEnabled] = useState(true)
   const [reminderStatus, setReminderStatus] = useState('')
   const [saveError, setSaveError] = useState('')
   const [saving, setSaving] = useState(false)
   const [factsMedication, setFactsMedication] = useState<MedicationSchedule>()
+  const [editingId, setEditingId] = useState<string>()
   const activeMedications = medications.filter((medication) => medication.active)
-  const takenToday = medicationLogs.filter((log) => log.status === 'taken')
+  const currentDate = today()
+  const todayLogs = medicationLogs.filter((log) => log.scheduledDate === currentDate)
+  const takenToday = todayLogs.filter((log) => log.status === 'taken')
+  const activeMedicationById = new Map(activeMedications.map((medication) => [medication.id, medication]))
   const reminderCount = activeMedications.filter((medication) => medication.reminderEnabled).length
+  const expectedToday = activeMedications
+    .filter((medication) => medicationIsScheduledOnDate(medication, currentDate))
+    .reduce((count, medication) => count + medication.times.length, 0)
+  const scheduledTakenToday = todayLogs.filter((log) => {
+    const medication = activeMedicationById.get(log.medicationId)
+    return medication && log.status === 'taken' && medicationIsScheduledOnDate(medication, currentDate)
+  })
+  const coveragePercent = expectedToday
+    ? Math.min(100, Math.round((scheduledTakenToday.length / expectedToday) * 100))
+    : 0
+  const nowMinutes = new Date().getHours() * 60 + new Date().getMinutes()
+  const pendingToday = activeMedications
+    .filter((medication) => medicationIsScheduledOnDate(medication, currentDate))
+    .flatMap((medication) =>
+      medication.times.map((time) => ({ medication, time, minutes: medicationTimeMinutes(time) })),
+    )
+    .filter(
+      ({ medication, time }) =>
+        !todayLogs.some(
+          (log) =>
+            log.medicationId === medication.id &&
+            log.scheduledTime === time &&
+            log.status === 'taken',
+        ),
+    )
+    .sort((left, right) => {
+      const leftDistance = left.minutes >= nowMinutes ? left.minutes - nowMinutes : 1440
+      const rightDistance = right.minutes >= nowMinutes ? right.minutes - nowMinutes : 1440
+      return leftDistance - rightDistance
+    })
+  const nextDose = pendingToday[0]
+  const weekStats = Array.from({ length: 7 }, (_, index) => {
+    const date = medicationDateKey(index - 6)
+    const expected = activeMedications
+      .filter((medication) => medicationIsScheduledOnDate(medication, date))
+      .reduce((count, medication) => count + medication.times.length, 0)
+    const taken = medicationHistoryLogs.filter((log) => {
+      const medication = activeMedicationById.get(log.medicationId)
+      return (
+        medication !== undefined &&
+        log.scheduledDate === date &&
+        log.status === 'taken' &&
+        medicationIsScheduledOnDate(medication, date)
+      )
+    }).length
+    return { date, expected, taken, percent: expected ? Math.min(100, Math.round((taken / expected) * 100)) : 0 }
+  })
+  const weekExpected = weekStats.reduce((sum, day) => sum + day.expected, 0)
+  const weekTaken = weekStats.reduce((sum, day) => sum + day.taken, 0)
+  const weekPercent = weekExpected ? Math.round((weekTaken / weekExpected) * 100) : 0
 
   useEffect(() => {
     if (!prefill) return
     setName(prefill.name)
+    setEditingId(undefined)
     setFormOpen(true)
   }, [prefill])
+
+  function openEditor(medication: MedicationSchedule) {
+    setEditingId(medication.id)
+    setName(medication.name)
+    setDose(medication.dose)
+    setTimes(medication.times.join(', '))
+    setFrequency(medication.frequency)
+    setInstructions(medication.instructions ?? '')
+    setSupplyRemaining(medication.supplyRemaining === undefined ? '' : String(medication.supplyRemaining))
+    setRefillAt(medication.refillAt === undefined ? '' : String(medication.refillAt))
+    setReminderEnabled(medication.reminderEnabled)
+    setSaveError('')
+    setFormOpen(true)
+  }
+
+  function closeEditor() {
+    setFormOpen(false)
+    setEditingId(undefined)
+    onPrefillConsumed?.()
+  }
 
   async function enableReminders() {
     if (!('Notification' in window)) {
@@ -10924,7 +11582,7 @@ function MedicationTracker({
     try {
       const now = new Date().toISOString()
       await onSave({
-        id: newId(),
+        id: editingId ?? newId(),
         name: name.trim(),
         dose: dose.trim(),
         frequency,
@@ -10932,8 +11590,14 @@ function MedicationTracker({
         instructions: instructions.trim() || undefined,
         reminderEnabled,
         active: true,
-        createdAt: now,
+        createdAt: medications.find((medication) => medication.id === editingId)?.createdAt ?? now,
         updatedAt: now,
+        ...(supplyRemaining.trim() && Number.isFinite(Number(supplyRemaining))
+          ? { supplyRemaining: Math.max(0, Number(supplyRemaining)) }
+          : {}),
+        ...(refillAt.trim() && Number.isFinite(Number(refillAt))
+          ? { refillAt: Math.max(0, Number(refillAt)) }
+          : {}),
         reference: prefill
           ? {
               externalId: prefill.sourceId,
@@ -10943,15 +11607,18 @@ function MedicationTracker({
                 retrievedAt: now,
               },
             }
-          : undefined,
+          : medications.find((medication) => medication.id === editingId)?.reference,
       })
       setName('')
       setDose('')
       setTimes('08:00')
       setFrequency('daily')
       setInstructions('')
+      setSupplyRemaining('')
+      setRefillAt('')
       setReminderEnabled(true)
       setFormOpen(false)
+      setEditingId(undefined)
       onPrefillConsumed?.()
     } catch {
       setSaveError('The schedule could not be saved. Your existing medication data is unchanged.')
@@ -10972,6 +11639,13 @@ function MedicationTracker({
       status,
       loggedAt: new Date().toISOString(),
     })
+    if (status === 'taken' && medication.supplyRemaining !== undefined) {
+      await onSave({
+        ...medication,
+        supplyRemaining: Math.max(0, medication.supplyRemaining - 1),
+        updatedAt: new Date().toISOString(),
+      })
+    }
   }
 
   return (
@@ -11013,14 +11687,70 @@ function MedicationTracker({
         </div>
         <button
           className="secondary-button medication-add-button"
-          onClick={() => setFormOpen((open) => !open)}
+          onClick={() => (formOpen ? closeEditor() : setFormOpen(true))}
         >
           <Plus size={17} /> {formOpen ? 'Close form' : 'Add schedule'}
         </button>
       </div>
+      <div className="medication-now-grid" aria-label="Medication overview">
+        <article className="medication-now-card medication-next-card">
+          <div className="medication-now-card-heading">
+            <span className="medication-now-kicker">Next up</span>
+            <BellRing size={17} />
+          </div>
+          {nextDose ? (
+            <>
+              <strong>{nextDose.medication.name}</strong>
+              <span>
+                {medicationTimeLabel(nextDose.time)}
+                {nextDose.medication.dose ? ` · ${nextDose.medication.dose}` : ''}
+              </span>
+            </>
+          ) : (
+            <>
+              <strong>{expectedToday ? 'Day covered' : 'No scheduled doses'}</strong>
+              <span>{expectedToday ? 'You have logged every planned dose so far.' : 'As-needed medicines stay available below.'}</span>
+            </>
+          )}
+        </article>
+        <article className="medication-now-card medication-coverage-card">
+          <div className="medication-now-card-heading">
+            <span className="medication-now-kicker">Today’s coverage</span>
+            <span className="medication-coverage-value">{coveragePercent}%</span>
+          </div>
+          <div className="medication-progress-track" aria-label={`${coveragePercent}% of scheduled doses logged`}>
+            <span style={{ width: `${coveragePercent}%` }} />
+          </div>
+          <span>{scheduledTakenToday.length} of {expectedToday} planned doses logged</span>
+        </article>
+        <article className="medication-now-card medication-week-card">
+          <div className="medication-now-card-heading">
+            <span className="medication-now-kicker">Last 7 days</span>
+            <strong>{weekPercent}%</strong>
+          </div>
+          <div className="medication-week-bars" aria-label={`${weekPercent}% adherence over the last 7 days`}>
+            {weekStats.map((day) => (
+              <span
+                key={day.date}
+                className={day.date === currentDate ? 'current' : ''}
+                style={{ height: `${Math.max(8, day.percent)}%` }}
+                title={`${day.date}: ${day.taken} of ${day.expected} doses`}
+              />
+            ))}
+          </div>
+          <span>{weekTaken} of {weekExpected} planned doses</span>
+        </article>
+      </div>
       {reminderStatus && <p className="form-success">{reminderStatus}</p>}
       {formOpen && (
         <div className="medication-form">
+          <div className="medication-form-heading">
+            <div>
+              <p className="eyebrow">{editingId ? 'Edit schedule' : 'New schedule'}</p>
+              <strong>{editingId ? 'Keep the plan current.' : 'Make the useful part easy to reach.'}</strong>
+            </div>
+            <span className="source-pill">Saved on this device</span>
+          </div>
           <label>
             Medication or supplement
             <input
@@ -11061,6 +11791,32 @@ function MedicationTracker({
             </label>
           </div>
           <small className="medication-form-hint">Separate multiple times with commas.</small>
+          <div className="three-col medication-schedule-fields">
+            <label>
+              Supply left <small>Optional</small>
+              <input
+                type="number"
+                min="0"
+                value={supplyRemaining}
+                onChange={(event) => setSupplyRemaining(event.target.value)}
+                placeholder="e.g. 18 doses"
+              />
+            </label>
+            <label>
+              Refill alert at <small>Optional</small>
+              <input
+                type="number"
+                min="0"
+                value={refillAt}
+                onChange={(event) => setRefillAt(event.target.value)}
+                placeholder="e.g. 7 doses"
+              />
+            </label>
+            <div className="medication-form-note">
+              <strong>Why this helps</strong>
+              <span>See when your supply needs attention before it becomes a surprise.</span>
+            </div>
+          </div>
           <label>
             Instructions <small>Optional context, such as “with food.”</small>
             <textarea
@@ -11086,7 +11842,7 @@ function MedicationTracker({
             disabled={!name.trim() || !times.trim() || saving}
             onClick={() => void save()}
           >
-            {saving ? 'Saving…' : 'Save medication'}
+            {saving ? 'Saving…' : editingId ? 'Update schedule' : 'Save medication'}
           </button>
           {saveError && <p className="form-error">{saveError}</p>}
         </div>
@@ -11113,6 +11869,13 @@ function MedicationTracker({
                   </small>
                 </div>
                 <button
+                  className="icon-button medication-edit-button"
+                  aria-label={`Edit ${medication.name}`}
+                  onClick={() => openEditor(medication)}
+                >
+                  <Edit3 size={15} />
+                </button>
+                <button
                   className="icon-button danger medication-remove-button"
                   aria-label={`Remove ${medication.name}`}
                   onClick={async () => {
@@ -11132,7 +11895,16 @@ function MedicationTracker({
                   <span>Schedule</span>
                   <strong>{medication.times.join(' · ') || 'No time set'}</strong>
                 </div>
+                {medication.supplyRemaining !== undefined && (
+                  <div className={medication.refillAt !== undefined && medication.supplyRemaining <= medication.refillAt ? 'medication-refill-low' : ''}>
+                    <span>Supply</span>
+                    <strong>{medication.supplyRemaining} doses left</strong>
+                  </div>
+                )}
               </div>
+              {medication.supplyRemaining !== undefined && medication.refillAt !== undefined && medication.supplyRemaining <= medication.refillAt && (
+                <p className="medication-refill-alert"><BellRing size={14} /> Refill soon · your supply is at or below {medication.refillAt} doses.</p>
+              )}
               {medication.instructions && (
                 <p className="medication-card-instructions">{medication.instructions}</p>
               )}
@@ -11494,7 +12266,6 @@ function ProfileEditor({
   const [unitSystem, setUnitSystem] = useState(profile.unitSystem)
   const [activityLevel, setActivityLevel] = useState(profile.activityLevel)
   const [supportStyle, setSupportStyle] = useState<SupportStyle>(profile.supportStyle ?? 'gentle')
-  const [age, setAge] = useState(profile.age?.toString() ?? '')
   const [birthDate, setBirthDate] = useState(profile.birthDate ?? '')
   const [heightValue, setHeightValue] = useState(
     profile.heightCm
@@ -11552,6 +12323,13 @@ function ProfileEditor({
   }
   return (
     <div className="profile-editor inline-form">
+      <div className="profile-edit-mode-banner" role="status">
+        <Edit3 size={17} />
+        <div>
+          <strong>Editing profile</strong>
+          <span>Fields are editable until you save or cancel.</span>
+        </div>
+      </div>
       <div className="profile-avatar-editor">
         <div className="profile-avatar-preview">
           {avatarDataUrl ? (
@@ -11639,22 +12417,21 @@ function ProfileEditor({
         </select>
       </label>
       <label>
-        Age
-        <input
-          type="number"
-          min="1"
-          max="120"
-          step="1"
-          value={age}
-          onChange={(event) => setAge(event.target.value)}
-        />
-      </label>
-      <label>
-        Birth date <small>Optional and private</small>
+        Birth date <small>Optional and private · age is calculated from this</small>
         <input
           type="date"
           value={birthDate}
           onChange={(event) => setBirthDate(event.target.value)}
+        />
+      </label>
+      <label>
+        Age <small>{birthDate ? 'Calculated from birth date' : 'Add a birth date to calculate this'}</small>
+        <input
+          type="text"
+          value={effectiveProfileAge({ age: profile.age, birthDate }) ?? ''}
+          readOnly
+          aria-readonly="true"
+          placeholder="Not available"
         />
       </label>
       <label>
@@ -11830,7 +12607,7 @@ function ProfileEditor({
         </button>
         <button
           className="primary-button"
-          disabled={!name.trim() || (age !== '' && (Number(age) < 1 || Number(age) > 120))}
+          disabled={!name.trim()}
           onClick={() =>
             void onSave({
               displayName: name.trim(),
@@ -11842,7 +12619,7 @@ function ProfileEditor({
               unitSystem,
               activityLevel,
               supportStyle,
-              age: age ? Number(age) : undefined,
+              age: birthDate ? undefined : profile.age,
               birthDate: birthDate || undefined,
               heightCm: heightValue
                 ? Number(heightValue) * (unitSystem === 'imperial' ? 2.54 : 1)

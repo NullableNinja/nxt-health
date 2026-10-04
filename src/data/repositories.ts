@@ -6,6 +6,8 @@ import type {
   DashboardConfiguration,
   DreamJournalEntry,
   ExerciseEntry,
+  FastingSchedule,
+  PersonalWorkout,
   Food,
   FoodLogEntry,
   Goal,
@@ -99,6 +101,18 @@ export const foodLogRepository = {
   remove: (id: string) => db.foodLogs.delete(id),
 }
 
+export const fastingScheduleRepository = {
+  get: () => db.fastingSchedules.toCollection().first(),
+  save: (schedule: FastingSchedule) => db.fastingSchedules.put(schedule),
+  remove: (id: string) => db.fastingSchedules.delete(id),
+}
+
+export const personalWorkoutRepository = {
+  list: () => db.personalWorkouts.orderBy('updatedAt').reverse().toArray(),
+  save: (workout: PersonalWorkout) => db.personalWorkouts.put(workout),
+  remove: (id: string) => db.personalWorkouts.delete(id),
+}
+
 export const exerciseRepository = {
   list: () => db.exercises.orderBy('date').toArray(),
   listForDate: (date: string) => db.exercises.where('date').equals(date).toArray(),
@@ -120,6 +134,7 @@ export const medicationRepository = {
   remove: (id: string) => db.medications.delete(id),
   listLogsForDate: (date: string) =>
     db.medicationLogs.where('scheduledDate').equals(date).toArray(),
+  listLogs: () => db.medicationLogs.orderBy('scheduledDate').reverse().toArray(),
   addLog: (entry: Omit<MedicationLog, 'id'>) => db.medicationLogs.add({ ...entry, id: newId() }),
 }
 

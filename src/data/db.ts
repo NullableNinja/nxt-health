@@ -8,6 +8,8 @@ import type {
   ExerciseEntry,
   Food,
   FoodLogEntry,
+  FastingSchedule,
+  PersonalWorkout,
   Goal,
   HealthMetricEntry,
   LifeEvent,
@@ -47,6 +49,8 @@ export class HealthDatabase extends Dexie {
   integrationSyncStates!: Table<IntegrationSyncState, string>
   integrationSyncRuns!: Table<IntegrationSyncRun, string>
   sourcePreferences!: Table<SourcePreference, string>
+  fastingSchedules!: Table<FastingSchedule, string>
+  personalWorkouts!: Table<PersonalWorkout, string>
 
   constructor() {
     super('health-intelligence')
@@ -181,6 +185,57 @@ export class HealthDatabase extends Dexie {
       integrationSyncRuns: 'id, connectionId, provider, outcome, startedAt',
       sourcePreferences: 'id, domain, metric, updatedAt',
     })
+    this.version(9).stores({
+      profiles: 'id, updatedAt',
+      goals: 'id, active, kind',
+      weights: 'id, date',
+      foods: 'id, name, barcode, source',
+      foodLogs: 'id, date, foodId, meal',
+      exercises: 'id, date, activityType',
+      wellbeingEntries: 'id, date, source',
+      lifeEvents: 'id, startDate, kind',
+      consentPreferences: 'id, scope, granted',
+      healthMetrics: 'id, date, kind, source',
+      captures: 'id, type, occurredAt, source',
+      dashboardConfigs: 'id, updatedAt',
+      bodyPhotos: 'id, date, createdAt',
+      medications: 'id, active, reminderEnabled, updatedAt, reference.externalId',
+      medicationLogs: 'id, medicationId, scheduledDate, status',
+      sleepSessions: 'id, date, kind, source, createdAt',
+      dreamJournalEntries: 'id, date, sleepSessionId, createdAt',
+      healthRecords: 'id, domain, kind, metric, localDate, dedupeKey, startAt',
+      integrationConnections: 'id, provider, status, updatedAt',
+      integrationSyncStates: 'id, connectionId, provider, updatedAt',
+      integrationSyncRuns: 'id, connectionId, provider, outcome, startedAt',
+      sourcePreferences: 'id, domain, metric, updatedAt',
+      fastingSchedules: 'id, enabled, updatedAt',
+    })
+    this.version(10).stores({
+      profiles: 'id, updatedAt',
+      goals: 'id, active, kind',
+      weights: 'id, date',
+      foods: 'id, name, barcode, source',
+      foodLogs: 'id, date, foodId, meal',
+      exercises: 'id, date, activityType',
+      wellbeingEntries: 'id, date, source',
+      lifeEvents: 'id, startDate, kind',
+      consentPreferences: 'id, scope, granted',
+      healthMetrics: 'id, date, kind, source',
+      captures: 'id, type, occurredAt, source',
+      dashboardConfigs: 'id, updatedAt',
+      bodyPhotos: 'id, date, createdAt',
+      medications: 'id, active, reminderEnabled, updatedAt, reference.externalId',
+      medicationLogs: 'id, medicationId, scheduledDate, status',
+      sleepSessions: 'id, date, kind, source, createdAt',
+      dreamJournalEntries: 'id, date, sleepSessionId, createdAt',
+      healthRecords: 'id, domain, kind, metric, localDate, dedupeKey, startAt',
+      integrationConnections: 'id, provider, status, updatedAt',
+      integrationSyncStates: 'id, connectionId, provider, updatedAt',
+      integrationSyncRuns: 'id, connectionId, provider, outcome, startedAt',
+      sourcePreferences: 'id, domain, metric, updatedAt',
+      fastingSchedules: 'id, enabled, updatedAt',
+      personalWorkouts: 'id, name, category, updatedAt',
+    })
   }
 }
 
@@ -218,5 +273,7 @@ export async function clearAllData(): Promise<void> {
     db.integrationSyncStates.clear(),
     db.integrationSyncRuns.clear(),
     db.sourcePreferences.clear(),
+    db.fastingSchedules.clear(),
+    db.personalWorkouts.clear(),
   ])
 }

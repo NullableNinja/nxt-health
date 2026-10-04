@@ -1,3 +1,5 @@
+import exerciseRecords from './exercises.json'
+
 export interface ActivityCatalogItem {
   id: string
   name: string
@@ -8,6 +10,7 @@ export interface ActivityCatalogItem {
   imageUrl?: string
   source?: 'built-in' | 'wger'
   aliases?: string[]
+  metValue?: number
 }
 
 export const ACTIVITY_CATALOG_SOURCE = {
@@ -341,6 +344,8 @@ const BUILT_IN_ACTIVITY_CATALOG: ActivityCatalogItem[] = [
   },
 ]
 
+const LOCAL_EXERCISE_CATALOG = exerciseRecords as ActivityCatalogItem[]
+
 let activityCatalogCache: Promise<ActivityCatalogItem[]> | undefined
 
 async function loadActivityCatalog(): Promise<ActivityCatalogItem[]> {
@@ -436,7 +441,8 @@ function searchCatalogItems(catalog: ActivityCatalogItem[], query: string): Acti
 export async function searchActivityCatalog(query: string): Promise<ActivityCatalogItem[]> {
   const normalized = query.trim().toLowerCase()
   if (!normalized) return []
-  const localResults = searchCatalogItems(BUILT_IN_ACTIVITY_CATALOG, normalized)
+  const localCatalog = [...BUILT_IN_ACTIVITY_CATALOG, ...LOCAL_EXERCISE_CATALOG]
+  const localResults = searchCatalogItems(localCatalog, normalized)
   // Keep broad activity searches focused and instant. The exercise API is only
   // useful when the local activity vocabulary has no match at all.
   if (localResults.length > 0) return localResults.slice(0, 24)
@@ -456,4 +462,14 @@ export async function searchActivityCatalog(query: string): Promise<ActivityCata
   } catch {
     return localResults.slice(0, 24)
   }
+}
+
+/** Estimate active calories from the catalog MET value when body weight is available. */
+export function estimateExerciseCalories(
+  metValue: number | undefined,
+  weightKg: number | undefined,
+  durationMinutes: number,
+): number | undefined {
+  if (!metValue || !weightKg || durationMinutes <= 0) return undefined
+  return Math.round((metValue * 3.5 * weightKg * durationMinutes) / 200)
 }

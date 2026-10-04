@@ -27,4 +27,4 @@ Use Secure, HttpOnly, SameSite=Lax, `__Host-` application-session cookies, CSRF 
 
 ## Current honest limit
 
-Until that BFF exists and real provider credentials/test accounts are supplied, this repository can provide the canonical model, provider matrix, local sync contract, file-import path, and truthful setup states. It must not claim that Fitbit, Google Health API, Strava, Withings, Oura, Garmin, or Health Connect is connected.
+The current release uses on-device Android Health Connect only. The Android bridge reads approved records locally; no provider tokens, OAuth callbacks, cloud BFF, or file-import connection state are part of the active product surface. It must not claim Health Connect is connected until the device permission flow completes and a real read succeeds.

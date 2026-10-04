@@ -1,0 +1,7227 @@
+[
+  {
+    "id": "exercise-001",
+    "name": "Walking",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-002",
+    "name": "Walking · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-003",
+    "name": "Walking · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-004",
+    "name": "Walking · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-005",
+    "name": "Walking · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-006",
+    "name": "Brisk walking",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-007",
+    "name": "Brisk walking · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-008",
+    "name": "Brisk walking · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-009",
+    "name": "Brisk walking · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-010",
+    "name": "Brisk walking · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-011",
+    "name": "Hiking",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-012",
+    "name": "Hiking · beginner",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-013",
+    "name": "Hiking · home",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-014",
+    "name": "Hiking · interval",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-015",
+    "name": "Hiking · advanced",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-016",
+    "name": "Trail running",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-017",
+    "name": "Trail running · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-018",
+    "name": "Trail running · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-019",
+    "name": "Trail running · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-020",
+    "name": "Trail running · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-021",
+    "name": "Running",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-022",
+    "name": "Running · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-023",
+    "name": "Running · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-024",
+    "name": "Running · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-025",
+    "name": "Running · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-026",
+    "name": "Jogging",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-027",
+    "name": "Jogging · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-028",
+    "name": "Jogging · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-029",
+    "name": "Jogging · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-030",
+    "name": "Jogging · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-031",
+    "name": "Treadmill running",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-032",
+    "name": "Treadmill running · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-033",
+    "name": "Treadmill running · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-034",
+    "name": "Treadmill running · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-035",
+    "name": "Treadmill running · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-036",
+    "name": "Stair climbing",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-037",
+    "name": "Stair climbing · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-038",
+    "name": "Stair climbing · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-039",
+    "name": "Stair climbing · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-040",
+    "name": "Stair climbing · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-041",
+    "name": "Stair stepper",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-042",
+    "name": "Stair stepper · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-043",
+    "name": "Stair stepper · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-044",
+    "name": "Stair stepper · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-045",
+    "name": "Stair stepper · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-046",
+    "name": "Elliptical",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-047",
+    "name": "Elliptical · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-048",
+    "name": "Elliptical · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-049",
+    "name": "Elliptical · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-050",
+    "name": "Elliptical · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-051",
+    "name": "Cycling",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-052",
+    "name": "Cycling · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-053",
+    "name": "Cycling · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-054",
+    "name": "Cycling · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-055",
+    "name": "Cycling · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-056",
+    "name": "Stationary cycling",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-057",
+    "name": "Stationary cycling · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-058",
+    "name": "Stationary cycling · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-059",
+    "name": "Stationary cycling · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-060",
+    "name": "Stationary cycling · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-061",
+    "name": "Mountain biking",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-062",
+    "name": "Mountain biking · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-063",
+    "name": "Mountain biking · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-064",
+    "name": "Mountain biking · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-065",
+    "name": "Mountain biking · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-066",
+    "name": "Swimming",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-067",
+    "name": "Swimming · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-068",
+    "name": "Swimming · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-069",
+    "name": "Swimming · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-070",
+    "name": "Swimming · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-071",
+    "name": "Water aerobics",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-072",
+    "name": "Water aerobics · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-073",
+    "name": "Water aerobics · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-074",
+    "name": "Water aerobics · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-075",
+    "name": "Water aerobics · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-076",
+    "name": "Rowing machine",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-077",
+    "name": "Rowing machine · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-078",
+    "name": "Rowing machine · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-079",
+    "name": "Rowing machine · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-080",
+    "name": "Rowing machine · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-081",
+    "name": "Cross-country skiing",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-082",
+    "name": "Cross-country skiing · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-083",
+    "name": "Cross-country skiing · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-084",
+    "name": "Cross-country skiing · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-085",
+    "name": "Cross-country skiing · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-086",
+    "name": "Skating",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-087",
+    "name": "Skating · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-088",
+    "name": "Skating · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-089",
+    "name": "Skating · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-090",
+    "name": "Skating · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-091",
+    "name": "Inline skating",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-092",
+    "name": "Inline skating · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-093",
+    "name": "Inline skating · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-094",
+    "name": "Inline skating · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-095",
+    "name": "Inline skating · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-096",
+    "name": "Roller skating",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-097",
+    "name": "Roller skating · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-098",
+    "name": "Roller skating · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-099",
+    "name": "Roller skating · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-100",
+    "name": "Roller skating · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "skate",
+      "skates"
+    ],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-101",
+    "name": "Jump rope",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-102",
+    "name": "Jump rope · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-103",
+    "name": "Jump rope · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-104",
+    "name": "Jump rope · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-105",
+    "name": "Jump rope · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-106",
+    "name": "Jumping jacks",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-107",
+    "name": "Jumping jacks · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-108",
+    "name": "Jumping jacks · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-109",
+    "name": "Jumping jacks · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-110",
+    "name": "Jumping jacks · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-111",
+    "name": "Burpees",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-112",
+    "name": "Burpees · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-113",
+    "name": "Burpees · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-114",
+    "name": "Burpees · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-115",
+    "name": "Burpees · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-116",
+    "name": "Mountain climbers",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-117",
+    "name": "Mountain climbers · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-118",
+    "name": "Mountain climbers · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-119",
+    "name": "Mountain climbers · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-120",
+    "name": "Mountain climbers · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-121",
+    "name": "High knees",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-122",
+    "name": "High knees · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-123",
+    "name": "High knees · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-124",
+    "name": "High knees · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-125",
+    "name": "High knees · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-126",
+    "name": "Butt kicks",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-127",
+    "name": "Butt kicks · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-128",
+    "name": "Butt kicks · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-129",
+    "name": "Butt kicks · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-130",
+    "name": "Butt kicks · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-131",
+    "name": "Bear crawl",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-132",
+    "name": "Bear crawl · beginner",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-133",
+    "name": "Bear crawl · home",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-134",
+    "name": "Bear crawl · interval",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-135",
+    "name": "Bear crawl · advanced",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-136",
+    "name": "Crab walk",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-137",
+    "name": "Crab walk · beginner",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-138",
+    "name": "Crab walk · home",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-139",
+    "name": "Crab walk · interval",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-140",
+    "name": "Crab walk · advanced",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-141",
+    "name": "Inchworm",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-142",
+    "name": "Inchworm · beginner",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-143",
+    "name": "Inchworm · home",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-144",
+    "name": "Inchworm · interval",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-145",
+    "name": "Inchworm · advanced",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-146",
+    "name": "Agility ladder",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-147",
+    "name": "Agility ladder · beginner",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-148",
+    "name": "Agility ladder · home",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-149",
+    "name": "Agility ladder · interval",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-150",
+    "name": "Agility ladder · advanced",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-151",
+    "name": "Push-up",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-152",
+    "name": "Push-up · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-153",
+    "name": "Push-up · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-154",
+    "name": "Push-up · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-155",
+    "name": "Push-up · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-156",
+    "name": "Knee push-up",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-157",
+    "name": "Knee push-up · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-158",
+    "name": "Knee push-up · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-159",
+    "name": "Knee push-up · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-160",
+    "name": "Knee push-up · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-161",
+    "name": "Diamond push-up",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-162",
+    "name": "Diamond push-up · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-163",
+    "name": "Diamond push-up · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-164",
+    "name": "Diamond push-up · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-165",
+    "name": "Diamond push-up · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-166",
+    "name": "Wide-grip push-up",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-167",
+    "name": "Wide-grip push-up · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-168",
+    "name": "Wide-grip push-up · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-169",
+    "name": "Wide-grip push-up · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-170",
+    "name": "Wide-grip push-up · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-171",
+    "name": "Decline push-up",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-172",
+    "name": "Decline push-up · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-173",
+    "name": "Decline push-up · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-174",
+    "name": "Decline push-up · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-175",
+    "name": "Decline push-up · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-176",
+    "name": "Incline push-up",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-177",
+    "name": "Incline push-up · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-178",
+    "name": "Incline push-up · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-179",
+    "name": "Incline push-up · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-180",
+    "name": "Incline push-up · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-181",
+    "name": "Pike push-up",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-182",
+    "name": "Pike push-up · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-183",
+    "name": "Pike push-up · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-184",
+    "name": "Pike push-up · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-185",
+    "name": "Pike push-up · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-186",
+    "name": "Handstand push-up",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-187",
+    "name": "Handstand push-up · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-188",
+    "name": "Handstand push-up · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-189",
+    "name": "Handstand push-up · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-190",
+    "name": "Handstand push-up · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-191",
+    "name": "Chest press",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-192",
+    "name": "Chest press · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-193",
+    "name": "Chest press · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-194",
+    "name": "Chest press · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-195",
+    "name": "Chest press · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-196",
+    "name": "Chest fly",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-197",
+    "name": "Chest fly · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-198",
+    "name": "Chest fly · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-199",
+    "name": "Chest fly · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-200",
+    "name": "Chest fly · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-201",
+    "name": "Bench press",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-202",
+    "name": "Bench press · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-203",
+    "name": "Bench press · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-204",
+    "name": "Bench press · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-205",
+    "name": "Bench press · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-206",
+    "name": "Incline bench press",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-207",
+    "name": "Incline bench press · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-208",
+    "name": "Incline bench press · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-209",
+    "name": "Incline bench press · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-210",
+    "name": "Incline bench press · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-211",
+    "name": "Decline bench press",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-212",
+    "name": "Decline bench press · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-213",
+    "name": "Decline bench press · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-214",
+    "name": "Decline bench press · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-215",
+    "name": "Decline bench press · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-216",
+    "name": "Dumbbell bench press",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-217",
+    "name": "Dumbbell bench press · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-218",
+    "name": "Dumbbell bench press · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-219",
+    "name": "Dumbbell bench press · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-220",
+    "name": "Dumbbell bench press · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-221",
+    "name": "Cable crossover",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-222",
+    "name": "Cable crossover · beginner",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-223",
+    "name": "Cable crossover · home",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-224",
+    "name": "Cable crossover · interval",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-225",
+    "name": "Cable crossover · advanced",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-226",
+    "name": "Pull-up",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-227",
+    "name": "Pull-up · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-228",
+    "name": "Pull-up · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-229",
+    "name": "Pull-up · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-230",
+    "name": "Pull-up · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-231",
+    "name": "Chin-up",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-232",
+    "name": "Chin-up · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-233",
+    "name": "Chin-up · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-234",
+    "name": "Chin-up · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-235",
+    "name": "Chin-up · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-236",
+    "name": "Assisted pull-up",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-237",
+    "name": "Assisted pull-up · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-238",
+    "name": "Assisted pull-up · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-239",
+    "name": "Assisted pull-up · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-240",
+    "name": "Assisted pull-up · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-241",
+    "name": "Lat pulldown",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-242",
+    "name": "Lat pulldown · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-243",
+    "name": "Lat pulldown · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-244",
+    "name": "Lat pulldown · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-245",
+    "name": "Lat pulldown · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-246",
+    "name": "Seated row",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-247",
+    "name": "Seated row · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-248",
+    "name": "Seated row · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-249",
+    "name": "Seated row · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-250",
+    "name": "Seated row · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-251",
+    "name": "Bent-over row",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-252",
+    "name": "Bent-over row · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-253",
+    "name": "Bent-over row · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-254",
+    "name": "Bent-over row · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-255",
+    "name": "Bent-over row · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-256",
+    "name": "Dumbbell row",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-257",
+    "name": "Dumbbell row · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-258",
+    "name": "Dumbbell row · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-259",
+    "name": "Dumbbell row · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-260",
+    "name": "Dumbbell row · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-261",
+    "name": "Inverted row",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-262",
+    "name": "Inverted row · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-263",
+    "name": "Inverted row · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-264",
+    "name": "Inverted row · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-265",
+    "name": "Inverted row · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-266",
+    "name": "Face pull",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-267",
+    "name": "Face pull · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-268",
+    "name": "Face pull · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-269",
+    "name": "Face pull · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-270",
+    "name": "Face pull · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-271",
+    "name": "Straight-arm pulldown",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-272",
+    "name": "Straight-arm pulldown · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-273",
+    "name": "Straight-arm pulldown · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-274",
+    "name": "Straight-arm pulldown · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-275",
+    "name": "Straight-arm pulldown · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-276",
+    "name": "Squat",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-277",
+    "name": "Squat · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-278",
+    "name": "Squat · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-279",
+    "name": "Squat · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-280",
+    "name": "Squat · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-281",
+    "name": "Front squat",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-282",
+    "name": "Front squat · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-283",
+    "name": "Front squat · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-284",
+    "name": "Front squat · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-285",
+    "name": "Front squat · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-286",
+    "name": "Goblet squat",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-287",
+    "name": "Goblet squat · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-288",
+    "name": "Goblet squat · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-289",
+    "name": "Goblet squat · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-290",
+    "name": "Goblet squat · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-291",
+    "name": "Split squat",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-292",
+    "name": "Split squat · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-293",
+    "name": "Split squat · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-294",
+    "name": "Split squat · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-295",
+    "name": "Split squat · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-296",
+    "name": "Bulgarian split squat",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-297",
+    "name": "Bulgarian split squat · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-298",
+    "name": "Bulgarian split squat · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-299",
+    "name": "Bulgarian split squat · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-300",
+    "name": "Bulgarian split squat · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-301",
+    "name": "Sissy squat",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-302",
+    "name": "Sissy squat · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-303",
+    "name": "Sissy squat · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-304",
+    "name": "Sissy squat · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-305",
+    "name": "Sissy squat · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-306",
+    "name": "Wall sit",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-307",
+    "name": "Wall sit · beginner",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-308",
+    "name": "Wall sit · home",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-309",
+    "name": "Wall sit · interval",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-310",
+    "name": "Wall sit · advanced",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-311",
+    "name": "Lunge",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-312",
+    "name": "Lunge · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-313",
+    "name": "Lunge · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-314",
+    "name": "Lunge · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-315",
+    "name": "Lunge · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-316",
+    "name": "Reverse lunge",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-317",
+    "name": "Reverse lunge · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-318",
+    "name": "Reverse lunge · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-319",
+    "name": "Reverse lunge · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-320",
+    "name": "Reverse lunge · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-321",
+    "name": "Walking lunge",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-322",
+    "name": "Walking lunge · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-323",
+    "name": "Walking lunge · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-324",
+    "name": "Walking lunge · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-325",
+    "name": "Walking lunge · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-326",
+    "name": "Curtsy lunge",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-327",
+    "name": "Curtsy lunge · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-328",
+    "name": "Curtsy lunge · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-329",
+    "name": "Curtsy lunge · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-330",
+    "name": "Curtsy lunge · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-331",
+    "name": "Step-up",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-332",
+    "name": "Step-up · beginner",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-333",
+    "name": "Step-up · home",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-334",
+    "name": "Step-up · interval",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-335",
+    "name": "Step-up · advanced",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-336",
+    "name": "Leg press",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-337",
+    "name": "Leg press · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-338",
+    "name": "Leg press · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-339",
+    "name": "Leg press · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-340",
+    "name": "Leg press · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-341",
+    "name": "Leg extension",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-342",
+    "name": "Leg extension · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-343",
+    "name": "Leg extension · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-344",
+    "name": "Leg extension · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-345",
+    "name": "Leg extension · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-346",
+    "name": "Leg curl",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-347",
+    "name": "Leg curl · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-348",
+    "name": "Leg curl · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-349",
+    "name": "Leg curl · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-350",
+    "name": "Leg curl · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-351",
+    "name": "Romanian deadlift",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-352",
+    "name": "Romanian deadlift · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-353",
+    "name": "Romanian deadlift · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-354",
+    "name": "Romanian deadlift · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-355",
+    "name": "Romanian deadlift · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-356",
+    "name": "Deadlift",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-357",
+    "name": "Deadlift · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-358",
+    "name": "Deadlift · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-359",
+    "name": "Deadlift · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-360",
+    "name": "Deadlift · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-361",
+    "name": "Sumo deadlift",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-362",
+    "name": "Sumo deadlift · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-363",
+    "name": "Sumo deadlift · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-364",
+    "name": "Sumo deadlift · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-365",
+    "name": "Sumo deadlift · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-366",
+    "name": "Good morning",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-367",
+    "name": "Good morning · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-368",
+    "name": "Good morning · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-369",
+    "name": "Good morning · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-370",
+    "name": "Good morning · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-371",
+    "name": "Hip thrust",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-372",
+    "name": "Hip thrust · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-373",
+    "name": "Hip thrust · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-374",
+    "name": "Hip thrust · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-375",
+    "name": "Hip thrust · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-376",
+    "name": "Glute bridge",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-377",
+    "name": "Glute bridge · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-378",
+    "name": "Glute bridge · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-379",
+    "name": "Glute bridge · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-380",
+    "name": "Glute bridge · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-381",
+    "name": "Calf raise",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-382",
+    "name": "Calf raise · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-383",
+    "name": "Calf raise · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-384",
+    "name": "Calf raise · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-385",
+    "name": "Calf raise · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-386",
+    "name": "Single-leg calf raise",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-387",
+    "name": "Single-leg calf raise · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-388",
+    "name": "Single-leg calf raise · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-389",
+    "name": "Single-leg calf raise · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-390",
+    "name": "Single-leg calf raise · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-391",
+    "name": "Shoulder press",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-392",
+    "name": "Shoulder press · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-393",
+    "name": "Shoulder press · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-394",
+    "name": "Shoulder press · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-395",
+    "name": "Shoulder press · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-396",
+    "name": "Arnold press",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-397",
+    "name": "Arnold press · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-398",
+    "name": "Arnold press · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-399",
+    "name": "Arnold press · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-400",
+    "name": "Arnold press · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-401",
+    "name": "Lateral raise",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-402",
+    "name": "Lateral raise · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-403",
+    "name": "Lateral raise · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-404",
+    "name": "Lateral raise · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-405",
+    "name": "Lateral raise · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-406",
+    "name": "Front raise",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-407",
+    "name": "Front raise · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-408",
+    "name": "Front raise · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-409",
+    "name": "Front raise · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-410",
+    "name": "Front raise · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-411",
+    "name": "Rear delt fly",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-412",
+    "name": "Rear delt fly · beginner",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-413",
+    "name": "Rear delt fly · home",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-414",
+    "name": "Rear delt fly · interval",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-415",
+    "name": "Rear delt fly · advanced",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-416",
+    "name": "Upright row",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-417",
+    "name": "Upright row · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-418",
+    "name": "Upright row · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-419",
+    "name": "Upright row · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-420",
+    "name": "Upright row · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-421",
+    "name": "Shrug",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-422",
+    "name": "Shrug · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-423",
+    "name": "Shrug · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-424",
+    "name": "Shrug · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-425",
+    "name": "Shrug · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-426",
+    "name": "Biceps curl",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-427",
+    "name": "Biceps curl · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-428",
+    "name": "Biceps curl · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-429",
+    "name": "Biceps curl · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-430",
+    "name": "Biceps curl · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-431",
+    "name": "Hammer curl",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-432",
+    "name": "Hammer curl · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-433",
+    "name": "Hammer curl · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-434",
+    "name": "Hammer curl · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-435",
+    "name": "Hammer curl · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-436",
+    "name": "Preacher curl",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-437",
+    "name": "Preacher curl · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-438",
+    "name": "Preacher curl · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-439",
+    "name": "Preacher curl · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-440",
+    "name": "Preacher curl · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-441",
+    "name": "Triceps extension",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-442",
+    "name": "Triceps extension · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-443",
+    "name": "Triceps extension · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-444",
+    "name": "Triceps extension · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-445",
+    "name": "Triceps extension · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-446",
+    "name": "Triceps pushdown",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-447",
+    "name": "Triceps pushdown · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-448",
+    "name": "Triceps pushdown · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-449",
+    "name": "Triceps pushdown · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-450",
+    "name": "Triceps pushdown · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-451",
+    "name": "Close-grip bench press",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-452",
+    "name": "Close-grip bench press · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-453",
+    "name": "Close-grip bench press · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-454",
+    "name": "Close-grip bench press · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-455",
+    "name": "Close-grip bench press · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-456",
+    "name": "Skull crusher",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-457",
+    "name": "Skull crusher · beginner",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-458",
+    "name": "Skull crusher · home",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-459",
+    "name": "Skull crusher · interval",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-460",
+    "name": "Skull crusher · advanced",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-461",
+    "name": "Plank",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-462",
+    "name": "Plank · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-463",
+    "name": "Plank · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-464",
+    "name": "Plank · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-465",
+    "name": "Plank · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-466",
+    "name": "Side plank",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-467",
+    "name": "Side plank · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-468",
+    "name": "Side plank · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-469",
+    "name": "Side plank · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-470",
+    "name": "Side plank · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-471",
+    "name": "Dead bug",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-472",
+    "name": "Dead bug · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-473",
+    "name": "Dead bug · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-474",
+    "name": "Dead bug · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-475",
+    "name": "Dead bug · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-476",
+    "name": "Bird dog",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-477",
+    "name": "Bird dog · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-478",
+    "name": "Bird dog · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-479",
+    "name": "Bird dog · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-480",
+    "name": "Bird dog · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-481",
+    "name": "Hollow hold",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-482",
+    "name": "Hollow hold · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-483",
+    "name": "Hollow hold · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-484",
+    "name": "Hollow hold · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-485",
+    "name": "Hollow hold · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-486",
+    "name": "Leg raise",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-487",
+    "name": "Leg raise · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-488",
+    "name": "Leg raise · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-489",
+    "name": "Leg raise · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-490",
+    "name": "Leg raise · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-491",
+    "name": "Hanging knee raise",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-492",
+    "name": "Hanging knee raise · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-493",
+    "name": "Hanging knee raise · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-494",
+    "name": "Hanging knee raise · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-495",
+    "name": "Hanging knee raise · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-496",
+    "name": "Russian twist",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-497",
+    "name": "Russian twist · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-498",
+    "name": "Russian twist · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-499",
+    "name": "Russian twist · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-500",
+    "name": "Russian twist · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-501",
+    "name": "Bicycle crunch",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-502",
+    "name": "Bicycle crunch · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-503",
+    "name": "Bicycle crunch · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-504",
+    "name": "Bicycle crunch · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-505",
+    "name": "Bicycle crunch · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-506",
+    "name": "Sit-up",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-507",
+    "name": "Sit-up · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-508",
+    "name": "Sit-up · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-509",
+    "name": "Sit-up · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-510",
+    "name": "Sit-up · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-511",
+    "name": "Crunch",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-512",
+    "name": "Crunch · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-513",
+    "name": "Crunch · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-514",
+    "name": "Crunch · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-515",
+    "name": "Crunch · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-516",
+    "name": "V-up",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-517",
+    "name": "V-up · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-518",
+    "name": "V-up · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-519",
+    "name": "V-up · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-520",
+    "name": "V-up · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-521",
+    "name": "Pallof press",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-522",
+    "name": "Pallof press · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-523",
+    "name": "Pallof press · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-524",
+    "name": "Pallof press · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-525",
+    "name": "Pallof press · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-526",
+    "name": "Back extension",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-527",
+    "name": "Back extension · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-528",
+    "name": "Back extension · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-529",
+    "name": "Back extension · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-530",
+    "name": "Back extension · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-531",
+    "name": "Yoga",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-532",
+    "name": "Yoga · beginner",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-533",
+    "name": "Yoga · home",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-534",
+    "name": "Yoga · interval",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-535",
+    "name": "Yoga · advanced",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-536",
+    "name": "Pilates",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-537",
+    "name": "Pilates · beginner",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-538",
+    "name": "Pilates · home",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-539",
+    "name": "Pilates · interval",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-540",
+    "name": "Pilates · advanced",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-541",
+    "name": "Stretching",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-542",
+    "name": "Stretching · beginner",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-543",
+    "name": "Stretching · home",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-544",
+    "name": "Stretching · interval",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-545",
+    "name": "Stretching · advanced",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-546",
+    "name": "Mobility work",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-547",
+    "name": "Mobility work · beginner",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-548",
+    "name": "Mobility work · home",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-549",
+    "name": "Mobility work · interval",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-550",
+    "name": "Mobility work · advanced",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-551",
+    "name": "Tai chi",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-552",
+    "name": "Tai chi · beginner",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-553",
+    "name": "Tai chi · home",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-554",
+    "name": "Tai chi · interval",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-555",
+    "name": "Tai chi · advanced",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-556",
+    "name": "Martial arts",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "martial art",
+      "combat training"
+    ],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-557",
+    "name": "Martial arts · beginner",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "martial art",
+      "combat training"
+    ],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-558",
+    "name": "Martial arts · home",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "martial art",
+      "combat training"
+    ],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-559",
+    "name": "Martial arts · interval",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "martial art",
+      "combat training"
+    ],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-560",
+    "name": "Martial arts · advanced",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "martial art",
+      "combat training"
+    ],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-561",
+    "name": "Boxing",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-562",
+    "name": "Boxing · beginner",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-563",
+    "name": "Boxing · home",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-564",
+    "name": "Boxing · interval",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-565",
+    "name": "Boxing · advanced",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-566",
+    "name": "Kickboxing",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-567",
+    "name": "Kickboxing · beginner",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-568",
+    "name": "Kickboxing · home",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-569",
+    "name": "Kickboxing · interval",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-570",
+    "name": "Kickboxing · advanced",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-571",
+    "name": "Cardio kickboxing",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "cardio kick boxing",
+      "kickboxing cardio"
+    ],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-572",
+    "name": "Cardio kickboxing · beginner",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "cardio kick boxing",
+      "kickboxing cardio"
+    ],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-573",
+    "name": "Cardio kickboxing · home",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "cardio kick boxing",
+      "kickboxing cardio"
+    ],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-574",
+    "name": "Cardio kickboxing · interval",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "cardio kick boxing",
+      "kickboxing cardio"
+    ],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-575",
+    "name": "Cardio kickboxing · advanced",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [
+      "cardio kick boxing",
+      "kickboxing cardio"
+    ],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-576",
+    "name": "Jiu-jitsu",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-577",
+    "name": "Jiu-jitsu · beginner",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-578",
+    "name": "Jiu-jitsu · home",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-579",
+    "name": "Jiu-jitsu · interval",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-580",
+    "name": "Jiu-jitsu · advanced",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-581",
+    "name": "Karate",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-582",
+    "name": "Karate · beginner",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-583",
+    "name": "Karate · home",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-584",
+    "name": "Karate · interval",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-585",
+    "name": "Karate · advanced",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-586",
+    "name": "Taekwondo",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-587",
+    "name": "Taekwondo · beginner",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-588",
+    "name": "Taekwondo · home",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-589",
+    "name": "Taekwondo · interval",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-590",
+    "name": "Taekwondo · advanced",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-591",
+    "name": "Wrestling",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-592",
+    "name": "Wrestling · beginner",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-593",
+    "name": "Wrestling · home",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-594",
+    "name": "Wrestling · interval",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-595",
+    "name": "Wrestling · advanced",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-596",
+    "name": "Muay Thai",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-597",
+    "name": "Muay Thai · beginner",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-598",
+    "name": "Muay Thai · home",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-599",
+    "name": "Muay Thai · interval",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-600",
+    "name": "Muay Thai · advanced",
+    "category": "Combat sports",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 8,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-601",
+    "name": "Dance",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-602",
+    "name": "Dance · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-603",
+    "name": "Dance · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-604",
+    "name": "Dance · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-605",
+    "name": "Dance · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-606",
+    "name": "Zumba",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-607",
+    "name": "Zumba · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-608",
+    "name": "Zumba · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-609",
+    "name": "Zumba · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-610",
+    "name": "Zumba · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-611",
+    "name": "Aerobics",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-612",
+    "name": "Aerobics · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-613",
+    "name": "Aerobics · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-614",
+    "name": "Aerobics · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-615",
+    "name": "Aerobics · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-616",
+    "name": "Barre",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-617",
+    "name": "Barre · beginner",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-618",
+    "name": "Barre · home",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-619",
+    "name": "Barre · interval",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-620",
+    "name": "Barre · advanced",
+    "category": "Mind-body",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 3,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-621",
+    "name": "Circuit training",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-622",
+    "name": "Circuit training · beginner",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-623",
+    "name": "Circuit training · home",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-624",
+    "name": "Circuit training · interval",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-625",
+    "name": "Circuit training · advanced",
+    "category": "Conditioning",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-626",
+    "name": "HIIT",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-627",
+    "name": "HIIT · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-628",
+    "name": "HIIT · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-629",
+    "name": "HIIT · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-630",
+    "name": "HIIT · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-631",
+    "name": "Tabata",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-632",
+    "name": "Tabata · beginner",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-633",
+    "name": "Tabata · home",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-634",
+    "name": "Tabata · interval",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-635",
+    "name": "Tabata · advanced",
+    "category": "Cardio",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 7,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-636",
+    "name": "Basketball",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-637",
+    "name": "Basketball · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-638",
+    "name": "Basketball · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-639",
+    "name": "Basketball · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-640",
+    "name": "Basketball · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-641",
+    "name": "Soccer",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-642",
+    "name": "Soccer · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-643",
+    "name": "Soccer · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-644",
+    "name": "Soccer · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-645",
+    "name": "Soccer · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-646",
+    "name": "Tennis",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-647",
+    "name": "Tennis · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-648",
+    "name": "Tennis · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-649",
+    "name": "Tennis · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-650",
+    "name": "Tennis · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-651",
+    "name": "Volleyball",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-652",
+    "name": "Volleyball · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-653",
+    "name": "Volleyball · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-654",
+    "name": "Volleyball · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-655",
+    "name": "Volleyball · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-656",
+    "name": "Golf",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-657",
+    "name": "Golf · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-658",
+    "name": "Golf · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-659",
+    "name": "Golf · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-660",
+    "name": "Golf · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-661",
+    "name": "Badminton",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-662",
+    "name": "Badminton · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-663",
+    "name": "Badminton · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-664",
+    "name": "Badminton · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-665",
+    "name": "Badminton · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-666",
+    "name": "Baseball",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-667",
+    "name": "Baseball · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-668",
+    "name": "Baseball · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-669",
+    "name": "Baseball · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-670",
+    "name": "Baseball · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-671",
+    "name": "Softball",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-672",
+    "name": "Softball · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-673",
+    "name": "Softball · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-674",
+    "name": "Softball · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-675",
+    "name": "Softball · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-676",
+    "name": "Rock climbing",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-677",
+    "name": "Rock climbing · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-678",
+    "name": "Rock climbing · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-679",
+    "name": "Rock climbing · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-680",
+    "name": "Rock climbing · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-681",
+    "name": "Bouldering",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-682",
+    "name": "Bouldering · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-683",
+    "name": "Bouldering · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-684",
+    "name": "Bouldering · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-685",
+    "name": "Bouldering · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-686",
+    "name": "Kayaking",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-687",
+    "name": "Kayaking · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-688",
+    "name": "Kayaking · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-689",
+    "name": "Kayaking · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-690",
+    "name": "Kayaking · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-691",
+    "name": "Paddleboarding",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-692",
+    "name": "Paddleboarding · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-693",
+    "name": "Paddleboarding · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-694",
+    "name": "Paddleboarding · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-695",
+    "name": "Paddleboarding · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-696",
+    "name": "Surfing",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-697",
+    "name": "Surfing · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-698",
+    "name": "Surfing · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-699",
+    "name": "Surfing · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-700",
+    "name": "Surfing · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-701",
+    "name": "Rowing",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-702",
+    "name": "Rowing · beginner",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-703",
+    "name": "Rowing · home",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-704",
+    "name": "Rowing · interval",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-705",
+    "name": "Rowing · advanced",
+    "category": "Strength",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 5,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-706",
+    "name": "Gardening",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-707",
+    "name": "Gardening · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-708",
+    "name": "Gardening · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-709",
+    "name": "Gardening · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-710",
+    "name": "Gardening · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-711",
+    "name": "Housework",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-712",
+    "name": "Housework · beginner",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-713",
+    "name": "Housework · home",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-714",
+    "name": "Housework · interval",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  },
+  {
+    "id": "exercise-715",
+    "name": "Housework · advanced",
+    "category": "Sports & recreation",
+    "equipment": [],
+    "muscles": [],
+    "aliases": [],
+    "metValue": 6,
+    "source": "built-in"
+  }
+]

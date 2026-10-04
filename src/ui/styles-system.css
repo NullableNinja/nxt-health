@@ -450,6 +450,282 @@
   }
 }
 
+/* Focused interaction polish for profile editing, check-ins, and compact logs. */
+.profile-edit-mode-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: -2px 0 4px;
+  padding: 10px 12px;
+  color: var(--accent-ink);
+  background: linear-gradient(120deg, var(--accent), color-mix(in srgb, var(--accent) 72%, white));
+  border: 1px solid var(--accent-strong);
+  border-radius: 10px;
+}
+
+.profile-edit-mode-banner > div {
+  display: grid;
+  gap: 2px;
+}
+
+.profile-edit-mode-banner span {
+  font-size: 0.78rem;
+}
+
+.fasting-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.fasting-status-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 10px;
+  color: var(--workspace-muted);
+  border: 1px solid var(--workspace-line);
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.fasting-status-pill.fasting {
+  color: var(--accent-ink);
+  background: var(--accent);
+  border-color: var(--accent-strong);
+}
+
+.fasting-status-pill.eating {
+  color: var(--success);
+  background: var(--success-soft);
+  border-color: color-mix(in srgb, var(--success) 55%, var(--workspace-line));
+}
+
+.fasting-settings-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.4fr) repeat(3, minmax(130px, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.fasting-toggle,
+.fasting-reminder-toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 12px;
+  background: color-mix(in srgb, var(--workspace-surface-soft) 64%, transparent);
+  border: 1px solid var(--workspace-line);
+  border-radius: 10px;
+}
+
+.fasting-toggle span {
+  display: grid;
+  gap: 3px;
+}
+
+.fasting-toggle small {
+  color: var(--workspace-muted);
+}
+
+.fasting-reminder-toggle {
+  width: fit-content;
+  color: var(--workspace-muted);
+  font-size: 0.84rem;
+}
+
+.fasting-actions {
+  align-items: center;
+}
+
+.photo-input-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.photo-input-actions > * {
+  width: fit-content;
+}
+
+.checkin-launch {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.journal-checkin-builder {
+  padding: 16px;
+  background: color-mix(in srgb, var(--workspace-surface-soft) 54%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 32%, var(--workspace-line));
+  border-radius: 12px;
+}
+
+.checkin-signal-choices button {
+  min-height: 76px;
+  background: var(--workspace-field-glass);
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.checkin-signal-choices button.selected {
+  color: var(--workspace-ink);
+  background: color-mix(in srgb, var(--accent-soft) 74%, var(--workspace-surface));
+  border-color: var(--accent);
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.checkin-signal-choices button.selected .checkin-choice-icon {
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.checkin-signal-choices button.selected .checkin-choice-copy small,
+.checkin-signal-choices button.selected .checkin-choice-mark {
+  color: var(--workspace-muted);
+}
+
+.medication-card {
+  gap: 10px;
+}
+
+.medication-card-details > div {
+  padding: 7px 10px;
+}
+
+.medication-card-details strong {
+  font-size: 0.92rem;
+}
+
+.medication-dose-actions {
+  gap: 4px;
+  padding-top: 8px;
+}
+
+.medication-dose-row {
+  min-height: 36px;
+  padding: 3px 0;
+}
+
+.medication-dose-actions-buttons .secondary-button {
+  min-height: 32px;
+  padding: 6px 10px;
+}
+
+/* Activity entry: keep the search primary and make the two supporting fields feel intentional. */
+.activity-entry-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
+  gap: 22px;
+}
+
+.activity-details-grid {
+  align-self: start;
+  padding: 0 0 0 20px;
+  background: transparent;
+  border: 0;
+  border-left: 1px solid var(--workspace-line);
+  border-radius: 0;
+}
+
+.activity-detail-field input,
+.activity-detail-field select {
+  min-height: 50px;
+}
+
+.activity-detail-field > span:first-child {
+  color: var(--workspace-ink);
+}
+
+.activity-no-results {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 14px;
+  background: color-mix(in srgb, var(--accent-soft) 52%, var(--workspace-surface-soft));
+  border: 1px dashed color-mix(in srgb, var(--accent) 66%, var(--workspace-line));
+  border-radius: 10px;
+}
+
+.activity-no-results > div,
+.personal-workout-library-heading {
+  display: grid;
+  gap: 3px;
+}
+
+.activity-no-results small,
+.personal-workout-library-heading small {
+  color: var(--workspace-muted);
+}
+
+.personal-workout-library {
+  display: grid;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.personal-workout-library-heading {
+  color: var(--workspace-muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.personal-workout-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.personal-workout-list button {
+  display: grid;
+  gap: 2px;
+  min-width: 150px;
+  padding: 9px 11px;
+  color: var(--workspace-ink);
+  text-align: left;
+  background: var(--workspace-field-glass);
+  border: 1px solid var(--workspace-line);
+  border-radius: 9px;
+}
+
+.personal-workout-list button:hover,
+.personal-workout-list button.selected {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.personal-workout-list small {
+  color: var(--workspace-muted);
+  font-size: 0.72rem;
+}
+
+.custom-workout-dialog {
+  width: min(100%, 700px);
+  max-height: min(90dvh, 860px);
+  overflow: auto;
+  padding: 24px;
+  color: var(--workspace-ink);
+  background: var(--workspace-surface);
+  border: 1px solid var(--workspace-line);
+  border-radius: 14px;
+  box-shadow: 0 18px 48px var(--workspace-shadow);
+}
+
+.custom-workout-dialog h2 {
+  max-width: 22ch;
+  margin: 0;
+}
+
+.custom-workout-dialog .panel-heading {
+  margin-bottom: 12px;
+}
+
+.custom-workout-actions {
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
 @layer reset {
   *,
   *::before,
@@ -8221,6 +8497,161 @@
     font-size: 1.02rem;
   }
 
+  .medication-now-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .medication-now-card {
+    display: grid;
+    align-content: start;
+    gap: 8px;
+    min-height: 126px;
+    padding: 14px 15px;
+    background: color-mix(in srgb, var(--workspace-surface-soft) 72%, transparent);
+    border: 1px solid var(--workspace-line);
+    border-radius: 13px;
+  }
+
+  .medication-now-card strong {
+    font-size: 1.12rem;
+    line-height: 1.18;
+  }
+
+  .medication-now-card > span:last-child {
+    color: var(--workspace-muted);
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .medication-now-card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .medication-now-kicker {
+    color: var(--workspace-muted);
+    font-size: 0.7rem;
+    font-weight: 850;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .medication-next-card {
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--workspace-line));
+    background: linear-gradient(145deg, color-mix(in srgb, var(--accent-soft) 55%, var(--workspace-surface)), var(--workspace-surface-soft));
+  }
+
+  .medication-next-card svg {
+    color: var(--accent-strong);
+  }
+
+  .medication-coverage-value,
+  .medication-week-card .medication-now-card-heading strong {
+    color: var(--accent-strong);
+    font-size: 1.1rem;
+  }
+
+  .medication-progress-track {
+    height: 8px;
+    overflow: hidden;
+    background: var(--workspace-line);
+    border-radius: 999px;
+  }
+
+  .medication-progress-track span {
+    display: block;
+    height: 100%;
+    background: var(--accent);
+    border-radius: inherit;
+    transition: width 240ms ease;
+  }
+
+  .medication-week-bars {
+    display: flex;
+    align-items: end;
+    gap: 5px;
+    height: 34px;
+    padding-top: 4px;
+  }
+
+  .medication-week-bars span {
+    flex: 1;
+    min-height: 3px;
+    background: color-mix(in srgb, var(--accent) 48%, var(--workspace-line));
+    border-radius: 4px 4px 2px 2px;
+  }
+
+  .medication-week-bars span.current {
+    background: var(--accent-strong);
+  }
+
+  .medication-form-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    padding-bottom: 4px;
+  }
+
+  .medication-form-heading > div {
+    display: grid;
+    gap: 3px;
+  }
+
+  .medication-form-heading .eyebrow {
+    margin: 0;
+  }
+
+  .medication-form-note {
+    display: grid;
+    align-content: center;
+    gap: 4px;
+    padding: 10px 12px;
+    color: var(--workspace-muted);
+    background: color-mix(in srgb, var(--accent-soft) 28%, transparent);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .medication-form-note strong {
+    color: var(--workspace-ink);
+  }
+
+  .medication-card-header {
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+  }
+
+  .medication-edit-button {
+    color: var(--workspace-muted);
+  }
+
+  .medication-edit-button:hover:not(:disabled) {
+    color: var(--accent-strong);
+  }
+
+  .medication-refill-low strong {
+    color: var(--warning, #ba761b);
+  }
+
+  .medication-refill-alert {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 0 48px;
+    padding: 8px 10px;
+    color: var(--warning, #ba761b);
+    background: color-mix(in srgb, #d99536 12%, transparent);
+    border: 1px solid color-mix(in srgb, #d99536 34%, var(--workspace-line));
+    border-radius: 8px;
+    font-size: 0.78rem;
+  }
+
   .medication-dose-actions {
     gap: 4px;
     padding-top: 16px;
@@ -8636,13 +9067,22 @@
       align-items: stretch;
     }
 
+    .medication-now-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .medication-form-heading {
+      display: grid;
+    }
+
     .medication-add-button {
       width: fit-content;
     }
 
     .medication-card-details,
     .medication-card-instructions,
-    .medication-dose-actions {
+    .medication-dose-actions,
+    .medication-refill-alert {
       margin-left: 0;
     }
 

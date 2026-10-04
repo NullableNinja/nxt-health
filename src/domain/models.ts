@@ -413,6 +413,29 @@ export interface Profile {
   updatedAt: string
 }
 
+export interface FastingSchedule {
+  id: ID
+  enabled: boolean
+  fastingStart: string
+  eatingStart: string
+  reminderEnabled: boolean
+  reminderMinutesBefore: number
+  createdAt: string
+  updatedAt: string
+}
+
+export interface PersonalWorkout {
+  id: ID
+  name: string
+  category: string
+  defaultDurationMinutes: number
+  intensity: 'easy' | 'moderate' | 'hard'
+  estimatedCalories?: number
+  note?: string
+  createdAt: string
+  updatedAt: string
+}
+
 export interface Goal {
   id: ID
   kind: GoalKind
@@ -481,6 +504,9 @@ export interface MedicationSchedule {
   createdAt: string
   updatedAt: string
   reference?: MedicationReference
+  /** Optional self-entered supply context. This is a planning aid, not a refill order. */
+  supplyRemaining?: number
+  refillAt?: number
 }
 
 export interface MedicationLog {
