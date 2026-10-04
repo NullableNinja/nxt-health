@@ -471,7 +471,13 @@ export interface HealthMetricEntry {
   createdAt: string
 }
 
-export type MedicationFrequency = 'daily' | 'weekdays' | 'custom' | 'as-needed'
+export type MedicationFrequency =
+  | 'daily'
+  | 'weekdays'
+  | 'weekly'
+  | 'monthly'
+  | 'custom'
+  | 'as-needed'
 export type MedicationLogStatus = 'taken' | 'skipped'
 
 export interface MedicationReferenceSource {
@@ -504,6 +510,10 @@ export interface MedicationSchedule {
   createdAt: string
   updatedAt: string
   reference?: MedicationReference
+  /** 0 = Sunday through 6 = Saturday, used by weekly schedules. */
+  dayOfWeek?: number
+  /** Calendar day used by monthly schedules. Values above a month's length use its last day. */
+  dayOfMonth?: number
   /** Optional self-entered supply context. This is a planning aid, not a refill order. */
   supplyRemaining?: number
   refillAt?: number

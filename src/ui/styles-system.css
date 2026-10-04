@@ -4151,6 +4151,29 @@
     gap: 3px;
     min-width: 0;
   }
+  .medication-lookup-result-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .medication-lookup-result-actions .text-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    white-space: nowrap;
+  }
+  .medication-lookup-selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .medication-lookup-selected .form-success {
+    margin: 0;
+  }
   .medication-lookup-result small,
   .medication-safety-grid span {
     color: var(--workspace-muted);

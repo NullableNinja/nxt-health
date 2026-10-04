@@ -11089,23 +11089,32 @@ function MedicationLookupPanel({
       {results.length > 0 && (
         <div className="medication-lookup-results" aria-label="Medication reference results">
           {results.map((result) => (
-            <button
+            <article
               className={`medication-lookup-result${selected?.id === result.id ? ' selected' : ''}`}
               key={result.id}
-              onClick={() => {
-                onSelect(result)
-                setQuery('')
-                setResults([])
-                setMessage('')
-                setStatus('idle')
-              }}
             >
               <span>
                 <strong>{result.name}</strong>
                 {result.synonym && <small>{result.synonym}</small>}
               </span>
-              <span className="text-button">Use in schedule</span>
-            </button>
+              <span className="medication-lookup-result-actions">
+                <button className="text-button" onClick={() => onInspect(result)}>
+                  View FDA facts <ChevronRight size={15} />
+                </button>
+                <button
+                  className="secondary-button"
+                  onClick={() => {
+                    onSelect(result)
+                    setQuery('')
+                    setResults([])
+                    setMessage('')
+                    setStatus('idle')
+                  }}
+                >
+                  Use in schedule
+                </button>
+              </span>
+            </article>
           ))}
         </div>
       )}
@@ -11377,14 +11386,55 @@ function medicationDateKey(offsetDays: number) {
 
 function medicationIsScheduledOnDate(medication: MedicationSchedule, date: string) {
   if (medication.frequency === 'as-needed') return false
+  const parsedDate = new Date(`${date}T12:00:00`)
+  if (medication.frequency === 'weekly') {
+    return medication.dayOfWeek === parsedDate.getDay()
+  }
+  if (medication.frequency === 'monthly') {
+    if (medication.dayOfMonth === undefined) return false
+    const lastDayOfMonth = new Date(
+      parsedDate.getFullYear(),
+      parsedDate.getMonth() + 1,
+      0,
+    ).getDate()
+    return parsedDate.getDate() === Math.min(medication.dayOfMonth, lastDayOfMonth)
+  }
   if (medication.frequency === 'weekdays') {
-    const day = new Date(`${date}T12:00:00`).getDay()
+    const day = parsedDate.getDay()
     return day >= 1 && day <= 5
   }
   if (medication.frequency === 'custom' && medication.daysOfWeek?.length) {
-    return medication.daysOfWeek.includes(new Date(`${date}T12:00:00`).getDay())
+    return medication.daysOfWeek.includes(parsedDate.getDay())
   }
   return true
+}
+
+const medicationWeekdays = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+]
+
+function ordinalDay(day: number) {
+  const suffix =
+    day % 100 >= 11 && day % 100 <= 13
+      ? 'th'
+      : ['th', 'st', 'nd', 'rd'][day % 10] ?? 'th'
+  return `${day}${suffix}`
+}
+
+function medicationFrequencyLabel(medication: MedicationSchedule) {
+  if (medication.frequency === 'weekly' && medication.dayOfWeek !== undefined) {
+    return `Every ${medicationWeekdays[medication.dayOfWeek]}`
+  }
+  if (medication.frequency === 'monthly' && medication.dayOfMonth !== undefined) {
+    return `Monthly on the ${ordinalDay(medication.dayOfMonth)}`
+  }
+  return medication.frequency.replace('-', ' ')
 }
 
 function medicationTimeMinutes(time: string) {
@@ -11425,6 +11475,8 @@ function MedicationTracker({
   const [dose, setDose] = useState('')
   const [times, setTimes] = useState('08:00')
   const [frequency, setFrequency] = useState<MedicationFrequency>('daily')
+  const [dayOfWeek, setDayOfWeek] = useState(new Date().getDay())
+  const [dayOfMonth, setDayOfMonth] = useState(String(new Date().getDate()))
   const [instructions, setInstructions] = useState('')
   const [supplyRemaining, setSupplyRemaining] = useState('')
   const [refillAt, setRefillAt] = useState('')
@@ -11504,6 +11556,8 @@ function MedicationTracker({
     setDose(medication.dose)
     setTimes(medication.times.join(', '))
     setFrequency(medication.frequency)
+    setDayOfWeek(medication.dayOfWeek ?? new Date().getDay())
+    setDayOfMonth(String(medication.dayOfMonth ?? new Date().getDate()))
     setInstructions(medication.instructions ?? '')
     setSupplyRemaining(medication.supplyRemaining === undefined ? '' : String(medication.supplyRemaining))
     setRefillAt(medication.refillAt === undefined ? '' : String(medication.refillAt))
@@ -11540,6 +11594,7 @@ function MedicationTracker({
       const currentMinutes = now.getHours() * 60 + now.getMinutes()
       activeMedications.forEach((medication) => {
         if (!medication.reminderEnabled) return
+        if (!medicationIsScheduledOnDate(medication, currentDate)) return
         medication.times.forEach((time) => {
           const [hours, minutes] = time.split(':').map(Number)
           const scheduledMinutes = hours * 60 + minutes
@@ -11576,6 +11631,17 @@ function MedicationTracker({
       .map((time) => time.trim())
       .filter(Boolean)
     if (scheduledTimes.length === 0) return
+    if (frequency === 'weekly' && dayOfWeek === undefined) {
+      setSaveError('Choose the weekday for this weekly schedule.')
+      return
+    }
+    if (
+      frequency === 'monthly' &&
+      (!dayOfMonth.trim() || Number(dayOfMonth) < 1 || Number(dayOfMonth) > 31)
+    ) {
+      setSaveError('Choose a calendar day from 1 to 31 for this monthly schedule.')
+      return
+    }
 
     setSaving(true)
     setSaveError('')
@@ -11587,6 +11653,8 @@ function MedicationTracker({
         dose: dose.trim(),
         frequency,
         times: scheduledTimes,
+        ...(frequency === 'weekly' ? { dayOfWeek } : {}),
+        ...(frequency === 'monthly' ? { dayOfMonth: Number(dayOfMonth) } : {}),
         instructions: instructions.trim() || undefined,
         reminderEnabled,
         active: true,
@@ -11613,6 +11681,8 @@ function MedicationTracker({
       setDose('')
       setTimes('08:00')
       setFrequency('daily')
+      setDayOfWeek(new Date().getDay())
+      setDayOfMonth(String(new Date().getDate()))
       setInstructions('')
       setSupplyRemaining('')
       setRefillAt('')
@@ -11785,12 +11855,48 @@ function MedicationTracker({
               >
                 <option value="daily">Every day</option>
                 <option value="weekdays">Weekdays</option>
+                <option value="weekly">Once a week</option>
+                <option value="monthly">Once a month</option>
                 <option value="custom">Custom schedule</option>
                 <option value="as-needed">As needed</option>
               </select>
             </label>
+            {frequency === 'weekly' && (
+              <label>
+                Day of week
+                <select
+                  value={dayOfWeek}
+                  onChange={(event) => setDayOfWeek(Number(event.target.value))}
+                >
+                  {medicationWeekdays.map((weekday, index) => (
+                    <option value={index} key={weekday}>
+                      {weekday}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )}
+            {frequency === 'monthly' && (
+              <label>
+                Day of month
+                <select
+                  value={dayOfMonth}
+                  onChange={(event) => setDayOfMonth(event.target.value)}
+                >
+                  {Array.from({ length: 31 }, (_, index) => index + 1).map((day) => (
+                    <option value={day} key={day}>
+                      {ordinalDay(day)}
+                    </option>
+                  ))}
+                </select>
+                <small>For shorter months, the last day is used.</small>
+              </label>
+            )}
           </div>
-          <small className="medication-form-hint">Separate multiple times with commas.</small>
+          <small className="medication-form-hint">
+            Separate multiple times with commas. Weekly and monthly medications use one scheduled
+            time.
+          </small>
           <div className="three-col medication-schedule-fields">
             <label>
               Supply left <small>Optional</small>
@@ -11860,7 +11966,7 @@ function MedicationTracker({
                 <div className="medication-card-heading">
                   <div className="medication-card-title">
                     <h4>{medication.name}</h4>
-                    <span>{medication.frequency.replace('-', ' ')}</span>
+                    <span>{medicationFrequencyLabel(medication)}</span>
                   </div>
                   <small className="medication-card-caption">
                     {medication.times.length === 1
