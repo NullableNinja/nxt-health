@@ -11775,6 +11775,15 @@ function MedicationTracker({
                 {medicationTimeLabel(nextDose.time)}
                 {nextDose.medication.dose ? ` · ${nextDose.medication.dose}` : ''}
               </span>
+              <div className="medication-next-action">
+                <button
+                  className="primary-button"
+                  onClick={() => void logDose(nextDose.medication, 'taken', nextDose.time)}
+                >
+                  Take dose
+                </button>
+                <span>Log it when you’re ready.</span>
+              </div>
             </>
           ) : (
             <>

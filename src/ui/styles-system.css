@@ -450,6 +450,344 @@
   }
 }
 
+/* Medication 2.0: compact the tracker around the next useful action. */
+.medication-tracker {
+  gap: 12px;
+}
+
+.medication-tracker > .panel-heading {
+  gap: 12px;
+}
+
+.medication-tracker > .panel-heading h3 {
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+}
+
+.medication-tracker > .compact-copy {
+  max-width: 58ch;
+  margin-top: -4px;
+}
+
+.medication-tracker-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  padding: 4px 0 10px;
+  border-bottom: 1px solid var(--workspace-line);
+}
+
+.medication-summary {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.medication-summary-item {
+  display: grid;
+  min-height: 0 !important;
+  gap: 2px;
+  padding: 0 18px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-right: 1px solid var(--workspace-line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.medication-summary-item:first-child {
+  padding-left: 0 !important;
+}
+
+.medication-summary-item:last-child {
+  padding-right: 0 !important;
+  border-right: 0 !important;
+}
+
+.medication-summary-item::before {
+  display: none;
+}
+
+.medication-summary-item span {
+  order: 2;
+  color: var(--workspace-muted);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.medication-summary-item strong {
+  order: 1;
+  margin: 0;
+  color: var(--workspace-ink);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.medication-summary-item small {
+  display: none;
+}
+
+.medication-add-button {
+  min-height: 38px;
+  padding: 8px 13px;
+  box-shadow: none !important;
+}
+
+.medication-now-grid {
+  grid-template-columns: minmax(1.25fr, 1.35fr) repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.medication-now-card {
+  min-height: 96px;
+  gap: 6px;
+  padding: 12px 14px;
+  border-radius: 12px;
+}
+
+.medication-now-card strong {
+  font-size: 1rem;
+}
+
+.medication-now-card > span:last-child {
+  font-size: 0.72rem;
+}
+
+.medication-now-kicker {
+  font-size: 0.62rem;
+}
+
+.medication-progress-track {
+  height: 6px;
+}
+
+.medication-week-bars {
+  height: 26px;
+}
+
+.medication-next-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.medication-next-action .primary-button {
+  min-height: 30px;
+  padding: 6px 10px;
+  font-size: 0.72rem;
+}
+
+.medication-next-action > span {
+  color: var(--workspace-muted);
+  font-size: 0.68rem;
+}
+
+.medication-card {
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+.medication-card-header {
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  gap: 10px;
+}
+
+.medication-card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+}
+
+.medication-card-title {
+  gap: 8px;
+}
+
+.medication-card-title h4 {
+  font-size: 0.98rem;
+}
+
+.medication-card-title > span {
+  padding: 3px 7px;
+  font-size: 0.65rem;
+}
+
+.medication-card-caption {
+  font-size: 0.7rem;
+}
+
+.medication-edit-button,
+.medication-remove-button {
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 6px;
+}
+
+.medication-card-details {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  padding: 8px 0;
+  border-top: 1px solid var(--workspace-line);
+  border-bottom: 1px solid var(--workspace-line);
+}
+
+.medication-card-details > div {
+  gap: 3px;
+  padding: 0 12px;
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--workspace-line);
+  border-radius: 0;
+}
+
+.medication-card-details > div:first-child {
+  padding-left: 0;
+}
+
+.medication-card-details > div:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.medication-card-details span,
+.medication-dose-actions-heading span {
+  font-size: 0.64rem;
+}
+
+.medication-card-details strong {
+  font-size: 0.84rem;
+}
+
+.medication-card-instructions {
+  padding: 7px 10px;
+  font-size: 0.78rem;
+}
+
+.medication-dose-actions {
+  gap: 4px;
+  padding-top: 8px;
+}
+
+.medication-dose-actions-heading small {
+  font-size: 0.72rem;
+}
+
+.medication-dose-row {
+  min-height: 36px;
+  padding: 3px 0;
+}
+
+.medication-dose-actions-buttons .secondary-button {
+  min-height: 32px;
+  padding: 6px 10px;
+  font-size: 0.74rem;
+}
+
+.medication-dose-actions-buttons .text-button,
+.medication-facts-button {
+  font-size: 0.74rem;
+}
+
+.medication-intro-card {
+  padding: 16px;
+}
+
+@media (max-width: 720px) {
+  .medication-tracker-toolbar {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .medication-summary {
+    min-width: 0;
+  }
+
+  .medication-summary-item {
+    padding-inline: 10px !important;
+  }
+
+  .medication-summary-item strong {
+    font-size: 1.05rem;
+  }
+
+  .medication-summary-item span {
+    font-size: 0.58rem;
+  }
+
+  .medication-add-button {
+    white-space: nowrap;
+  }
+
+  .medication-now-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .medication-next-card {
+    grid-column: 1 / -1;
+  }
+
+  .medication-card-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 0;
+  }
+
+  .medication-card-details > div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .medication-card-details > div:last-child {
+    grid-column: 1 / -1;
+    padding-top: 8px;
+    padding-left: 0;
+    border-top: 1px solid var(--workspace-line);
+  }
+}
+
+@media (max-width: 480px) {
+  .medication-tracker-toolbar {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .medication-add-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .medication-summary {
+    justify-content: space-between;
+  }
+
+  .medication-summary-item {
+    flex: 1;
+    padding-inline: 7px !important;
+  }
+
+  .medication-summary-item:first-child {
+    padding-left: 0 !important;
+  }
+
+  .medication-summary-item:last-child {
+    padding-right: 0 !important;
+  }
+
+  .medication-next-action {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .medication-next-action .primary-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* Focused interaction polish for profile editing, check-ins, and compact logs. */
 .profile-edit-mode-banner {
   display: flex;
